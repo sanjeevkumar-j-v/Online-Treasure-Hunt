@@ -9,6 +9,9 @@
   },
   "author": "sanjeev kumar",
   "license": "ISC",
+  "engines": {
+    "node": "10.20.0"
+  },
   "dependencies": {
     "ejs": "^3.1.2",
     "express": "^4.17.1",
