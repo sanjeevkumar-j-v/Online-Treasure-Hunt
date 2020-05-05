@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 //connect to the database
-mongoose.connect('mongodb://localhost/inno_hunt_db');
+mongoose.connect('mongodb+srv://admin-sanjeev:sANJEEVsk@28@cluster0-qcpgk.mongodb.net/inno_hunt_db', {useNewUrlParser: true});;
 
 //acquire the connection(to check if it's successful)
 const db = mongoose.connection;
