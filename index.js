@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+
 let port = process.env.PORT;
 if(port == null || port == ""){
     port = 8000;
@@ -12,6 +14,11 @@ app.use(express.static('assets'));
 app.use('/',require('./routes'));
 
 const db = require('./config/mongoose');
+
+app.use(expressLayouts);
+
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 // setup view engine as ejs
 app.set('view engine', 'ejs');

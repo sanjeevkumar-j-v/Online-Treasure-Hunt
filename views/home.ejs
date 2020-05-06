@@ -1,18 +1,3 @@
-<!-- <html>
-    <head>
-        <title>
-            <%= title %>
-        </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/home.css">
-       
-    </head>
-    <body>
-        
-        <h1> <%= title %>  </h1>
-
-    </body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <title> <%= title %></title>
@@ -23,319 +8,153 @@
 <link rel="stylesheet" href="/css/animate.css">
 <link rel="stylesheet" href="/css/home.css">
 
-<!-- <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style> -->
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Club<br>Innovative</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#innohunt" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inno Hunt</a> 
-    <a href="#why-participate" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why do I participate</a> 
-    <a href="#how-to-play" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">How to play</a> 
-    <a href="#start-hunting" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Start Hunting</a> 
-    <a href="#about-us" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</nav>
-
-
-<!-- <span id="viewed-status" class="vstatus"></span> -->
-
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Club Innovative</span>
-  
-</header>
-<section id = "status">
-    <!-- <span id = "percentage-viewed">0 </span>% viewed -->
-   </section>
-
-
-
-
-
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="inno-hunt">
-    <h2 class="w3-jumbo animated bounceIn slow "><b>Online Treasure Hunt</b></h2>
-    <!-- <div class="animated pulse infinite">Example</div> -->
-    <h2 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Inno Hunt.</b></h2>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
-  <!-- Photo grid (modal) -->
-  <div id="photo-grid" class="w3-row-padding">
-    <div class="w3-half">
-      <img class="animated bounceInUp slower" animDone="false" src="/images/two-brown-and-red-gift-boxes-on-red-surface-1666070.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/neon-signage-2681319.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Club<br>Innovative</b></h3>
     </div>
-
-    <div class="w3-half">
-      <img class="animated bounceInUp slower" animDone="false" src="images/black-chess-chess-pieces-close-up-131615.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
-      <!-- <img src="/images/photo-of-woman-looking-upwards-2591431.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> -->
-      <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/close-up-photo-of-black-ceramic-mug-3806690.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-<!-- 
-      <img src="/images/notes-on-board-3782134.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design"> -->
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+      <a href="#innohunt" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inno Hunt</a> 
+      <a href="#why-participate" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why do I participate</a> 
+      <a href="#how-to-play" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">How to play</a> 
+      <a href="#start-hunting" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Start Hunting</a> 
+      <a href="#about-us" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a> 
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- Modal for full size images on click-->
-  <!-- <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div> -->
 
-  <!-- why do i participate -->
-  <div class="w3-container" id="why-participate" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Why do I participate?</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-  
-   <!-- how to play -->
-   <div class="w3-container" id="how-to-play" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>How to play?</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
-  </div>
+  <!-- <span id="viewed-status" class="vstatus"></span> -->
 
-  <!-- start hunting -->
-  <div class="w3-container" id="start-hunting" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Start Hunting.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <a class="join-button animated heartBeat delay-3s infinite slow"><button class="w3-xxlarge button" ><b>Join</b> </button></a>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Club Innovative</span>
+    
+  </header>
+
+  <!-- status for scroll -->
+  <section id = "status"> </section>
+
+
+
+
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="inno-hunt">
+      <h2 class="w3-jumbo animated bounceIn slow "><b>Online Treasure Hunt</b></h2>
+      <!-- <div class="animated pulse infinite">Example</div> -->
+      <h2 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Inno Hunt.</b></h2>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
     </div>
     
-    <div class="w3-container">
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
-  </div>
+    <!-- Photo grid (modal) -->
+    <div id="photo-grid" class="w3-row-padding">
+      <div class="w3-half">
+        <img class="animated bounceInUp slower" animDone="false" src="/images/two-brown-and-red-gift-boxes-on-red-surface-1666070.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/neon-signage-2681319.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      </div>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <div class="w3-half">
+        <img class="animated bounceInUp slower" animDone="false" src="images/black-chess-chess-pieces-close-up-131615.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+        <!-- <img src="/images/photo-of-woman-looking-upwards-2591431.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> -->
+        <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/close-up-photo-of-black-ceramic-mug-3806690.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+  <!-- 
+        <img src="/images/notes-on-board-3782134.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+        <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design"> -->
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <!-- <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div> -->
+
+    <!-- why do i participate -->
+    <div class="w3-container" id="why-participate" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Why do I participate?</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
+      <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    
+    <!-- how to play -->
+    <div class="w3-container" id="how-to-play" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>How to play?</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>The best team in the world.</p>
+      <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p><b>Our designers are thoughtfully chosen</b>:</p>
+    </div>
+
+    <!-- start hunting -->
+    <div class="w3-container" id="start-hunting" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Start Hunting.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <a href="/sign-in" class="join-button animated heartBeat delay-3s infinite slow">
+        <button class="w3-xxlarge button" ><b>Join</b> </button>
+      </a>
+      </div>
+      
+    <!-- About Us -->
+    <div class="w3-container" id="about-us" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>About Us.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>We are the members of family Club Innovative, aiming towards developing your skills.</p>
+      <img class="animated " id="logo" src="\images\logo.jpg" alt="club innovative logo">
+    </div>
+
+    <!-- Contact -->
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Contact.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>Do you have any queries? <br> Fill out the form and send the details :) <br> We love to help you!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
         </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
         </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
         </div>
-      </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      </form>  
     </div>
+
+  <!-- End page content -->
   </div>
 
-  <!-- About Us -->
-  <div class="w3-container" id="about-us" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>About Us.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by Club Innovative</p></div>
 
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
-  </div>
-
-<!-- End page content -->
-</div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-var photos = document.querySelectorAll("#photo-grid img");
-var headings = document.querySelectorAll("h1 ");
-function dispPhoto() {
-        for (let photo of photos){
-            let coordinate = photo.getBoundingClientRect();
-            
-            if ((photo.getAttribute("animDone") == "false" ) && coordinate.top <= window.innerHeight)
-                {
-                    photo.setAttribute("animDone", "true");
-                    photo.classList.add("zoomIn");  
-                }
-            else if (coordinate.top > window.innerHeight) 
-                {
-                    photo.setAttribute("animDone","false");
-                    // photo.classList.remove("zoomIn");
-                }
-        }
-        
-
-    }
-function dispHeading() {
-    for (let heading of headings){
-            let coordinate = heading.getBoundingClientRect();
-            // heading.style.display="block";
-            // if (coordinate.top <= window.innerHeight)
-            //     {
-            //         heading.classList.add("lightSpeedIn"); 
-            //     }
-            if ((heading.getAttribute("animDone") == "false" ) && coordinate.top <= window.innerHeight)
-            {
-                heading.setAttribute("animDone", "true");
-                heading.classList.add("lightSpeedIn");  
-            }
-            else if (coordinate.top > window.innerHeight) 
-            {
-                heading.setAttribute("animDone","false");
-                heading.classList.remove("lightSpeedIn");
-            }
-               
-        }
-    }
-
-window.addEventListener("scroll",dispHeading);
-// window.addEventListener("scroll",dispPhoto);
-
-
-
-var leftval = 0, topval = 0;
-window.addEventListener("scroll",function(event){
-    document.getElementById("status").style.display="block";
-    let perc = currentScrollPercentage();
-    document.getElementById("status").style.width= Math.floor(perc) + 'vw';
-    checkScroll();
-});
-window.addEventListener("click",function(event){
-    document.getElementById("status").style.display="none";    
-});
-
-
-function currentScrollPercentage()
-{
-    return ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-}
-
-
-
-</script>
+  <script src="/js/home.js"></script>
 
 </body>
 </html>

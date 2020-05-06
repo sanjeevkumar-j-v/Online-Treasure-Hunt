@@ -1,0 +1,133 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: degisenarkaplan 15s ease infinite;
+}
+
+ 
+ .kutu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.kutu:hover {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	animation-name: kutuozellik;
+	animation-duration: 0.25s;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-left: 8px solid #fff;
+	border-radius: 10px;
+	 
+}
+
+.kutu h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.kutu .form-giris {
+  position: relative;
+}
+
+.kutu .form-giris input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.kutu .form-giris label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.kutu .form-giris input:focus ~ label,
+.kutu .form-giris input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: white;
+  font-size: 20px;
+  
+}
+.girisbuton {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  background: linear-gradient(100deg,#ef32d9,#22c3c1,#ef32d9);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.girisbuton:hover {
+  background-position: right;
+}
+.kayit-yazi {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.kayit-yazi a {
+	color: white;
+	text-decoration: none;
+}
+
+.login-google {
+    width: 100%;
+    height: 50px; 
+    margin-top: 20px; 
+    padding-top: 8px; 
+    opacity: 0.9;
+}
+
+@keyframes kutuozellik {
+   0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes degisenarkaplan {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+

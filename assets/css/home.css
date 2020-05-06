@@ -35,6 +35,7 @@ body {font-size:16px;}
     width: 0vw;
 }
 .join-button {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +63,10 @@ body {font-size:16px;}
 	/* -webkit-backface-visibility: hidden; */
 	/* -moz-osx-font-smoothing: grayscale; */
  }
+#logo {
+    width: 100%;
+    border: none;
+}
  @keyframes color-change {
     0%   {background-color: #FD0000; }
     25%  {background-color:rgb(255, 187, 0);}
