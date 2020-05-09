@@ -1,7 +1,7 @@
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: degisenarkaplan 15s ease infinite;
+	animation: bg-color-change 10s ease infinite;
 }
 
  
@@ -16,12 +16,13 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  transition: all 600ms ease;
 }
 
 .kutu:hover {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-	animation-name: kutuozellik;
+	animation-name: btn-color-change;
 	animation-duration: 0.25s;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -67,7 +68,7 @@ body {
 .kutu .form-giris input:valid ~ label {
   top: -30px;
   left: 0;
-  color: white;
+  color: white; 
   font-size: 20px;
   
 }
@@ -87,7 +88,9 @@ body {
 
 .girisbuton:hover {
   background-position: right;
+  font-size: 120%;
 }
+
 .kayit-yazi {
   margin-top: 60px;
   text-align: center;
@@ -107,7 +110,7 @@ body {
     opacity: 0.9;
 }
 
-@keyframes kutuozellik {
+@keyframes btn-color-change {
    0% {
 		background-position: 0% 50%;
 	}
@@ -118,7 +121,7 @@ body {
 		background-position: 0% 50%;
 	}
 }
-@keyframes degisenarkaplan {
+@keyframes bg-color-change {
 	0% {
 		background-position: 0% 50%;
 	}

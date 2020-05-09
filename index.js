@@ -7,6 +7,12 @@ if(port == null || port == ""){
     port = 8000;
 }
 
+// used for session cookie
+const session = require('express-session');
+const passport = require('passport');
+
+// const passportGoogle = require('./config/passport-google-oauth2-strategy');
+
 app.use(express.urlencoded());
 
 app.use(express.static('assets'));

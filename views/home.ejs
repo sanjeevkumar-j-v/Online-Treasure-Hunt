@@ -18,7 +18,7 @@
     </div>
     <div class="w3-bar-block">
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-      <a href="#innohunt" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inno Hunt</a> 
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inno Hunt</a> 
       <a href="#why-participate" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why do I participate</a> 
       <a href="#how-to-play" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">How to play</a> 
       <a href="#start-hunting" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Start Hunting</a> 
@@ -54,7 +54,7 @@
 
     <!-- Header -->
     <div class="w3-container" style="margin-top:80px" id="inno-hunt">
-      <h2 class="w3-jumbo animated bounceIn slow "><b>Online Treasure Hunt</b></h2>
+      <h2 onclick="openFullscreen();" class="w3-jumbo animated bounceIn slow "><b>Online Treasure Hunt</b></h2>
       <!-- <div class="animated pulse infinite">Example</div> -->
       <h2 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Inno Hunt.</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -63,8 +63,8 @@
     <!-- Photo grid (modal) -->
     <div id="photo-grid" class="w3-row-padding">
       <div class="w3-half">
-        <img class="animated bounceInUp slower" animDone="false" src="/images/two-brown-and-red-gift-boxes-on-red-surface-1666070.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-        <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/neon-signage-2681319.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+        <img class="animated bounceInUp slower" animDone="false" src="/images/two-brown-and-red-gift-boxes-on-red-surface-1666070.jpg" style="width:100%"  alt="Concrete meets bricks">
+        <img class="animated bounceInUp slower delay-1s" animDone="false" src="/images/neon-signage-2681319.jpg" style="width:100%"  alt="Light, white and tight scandinavian design">
       </div>
 
       <div class="w3-half">
@@ -107,13 +107,14 @@
       incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <p><b>Our designers are thoughtfully chosen</b>:</p>
+      
     </div>
 
     <!-- start hunting -->
     <div class="w3-container" id="start-hunting" style="margin-top:75px">
       <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>Start Hunting.</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <a href="/sign-in" class="join-button animated heartBeat delay-3s infinite slow">
+      <a href="/sign-up" class="join-button animated heartBeat delay-3s infinite slow">
         <button class="w3-xxlarge button" ><b>Join</b> </button>
       </a>
       </div>
@@ -123,7 +124,8 @@
       <h1 class="w3-xxxlarge w3-text-red animated" animDone="false"><b>About Us.</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>We are the members of family Club Innovative, aiming towards developing your skills.</p>
-      <img class="animated " id="logo" src="\images\logo.jpg" alt="club innovative logo">
+      <span id="logo-container">
+      <img class="animated " id="logo" src="\images\logo.jpg" alt="club innovative logo"> </span>
     </div>
 
     <!-- Contact -->
