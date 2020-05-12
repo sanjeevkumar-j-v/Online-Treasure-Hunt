@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const passport = require('passport');
 
 const playgroundController = require('../controllers/playground_controller');
 
 
-router.get('/',playgroundController.start);
+router.get('/',passport.checkAuthentication ,playgroundController.start);
 
 
 
