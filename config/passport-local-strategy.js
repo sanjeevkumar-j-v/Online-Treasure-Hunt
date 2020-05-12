@@ -2,7 +2,7 @@ const passport = require('passport');
 
 const LocalStrategy = require('passport-local').Strategy;
 
-const User = require("../models/user")
+const User = require("../models/user");
 
 // authentication using passport
 passport.use(new LocalStrategy({
@@ -54,6 +54,27 @@ passport.checkAuthentication = function(req, res, next){
     // if user is not signed in
     return res.redirect('/users/sign-in');
 }
+
+// passport.checkLevel = function(req, res, next){
+//     // If user is signed in, then pass on the request to next function (controller's action)
+//     if(req.isAuthenticated()){
+
+//         User.findById(req.user.id, function(err, user) {
+//             if(err){
+//                 console.log("Error in finding user on checking level")
+//                 return res.redirect('/');
+//             }
+//             if(user.level == 1){
+//                 return next();
+//             }else{
+//                 return res.redirect('/');
+//             }
+//         });
+
+//     }
+//     return res.redirect('/users/sign-in');
+
+// }
 
 passport.setAuthenticatedUser = function(req, res, next){
     if(req.isAuthenticated()){
