@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const registrationMailer = require('../mailers/registration_mailer');
 
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
@@ -32,7 +33,8 @@ module.exports.create = function(req, res){
         if(!user) {
             User.create(req.body, function(err, user){
                 if(err){console.log('Error in creating user in signing up'); return;}
-
+                console.log('User created : ',user);
+                registrationMailer.accCreated(user);
                 return res.redirect('/users/sign-in');
             })
         }else{

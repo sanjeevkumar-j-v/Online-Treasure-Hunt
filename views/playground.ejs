@@ -1,22 +1,47 @@
 <link rel="stylesheet" href="/css/playground.css">
+<!-- Web-Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+rel="stylesheet">
 <body>
-    <div>
+    <!-- <div>
         <p> <%= user.name %> ,  <%= user %></p>
         <h1 class="text" style="color: rgb(255, 255, 0); margin-bottom: -100vh;">Welcome Back! <br>
              <small> <%= user.name %> </small> </h1>
-        <!-- <h6>Priya Sreethi</h6> -->
+        
+    </div> -->
+    <div id="home">
+        <div style=" font: bolder 3vw ''; font-family: Fredoka One; padding: 3vw; padding-top: 28vh;">
+        <h1 style="color: #88024a;  ">Welcome back</h1>
+        <h3 style="color: #6c1b80;"> <%= user.name%> </h3>
+        <button style="font-family: inherit;  width: 150px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #fb7c55, #e41967);">continue</button>
+        </div>
     </div>
     <div  class="backdrop">
-        <p class="text screen">Heyy</p>
-        <img src="/images/pluto-done.png" alt="">
+        <div style="border-left: 0.3vw solid rgb(180, 25, 25);">
+        <p class="text lighten">“Do you know what my favorite part of the game is? <br> The opportunity to play.” <br> <br> -Mike Singletary</p>
+        </div>
+        <!-- <img src="/images/pluto-done.png" alt=""> -->
     </div>
     <!-- <img style="width: 100%;" src="/images/photo-of-people-having-meeting-3183186.jpg" alt=""> -->
+
+    <div  id="solution" >
+        <form style="color: #0300b6;  font: bolder 3vw ''; font-family: Fredoka One; height: 100%; padding: 60vh 0 0 2vw; " action="" method="post">
+            <p>Hey there, <br> Type password here <br> To Unlock next level</p>
+
+            <input style="font-family: inherit;  width: 350px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #ffa68b, #d64f83);" placeholder="Type here" type="text"> <br><br>
+            <button style="font-family: inherit;  width: 150px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #fb7c55, #e41967);" type="submit">submit</button>
+        </form>
+        <!-- <img src="/images/pluto-done.png" alt=""> -->
+    </div>
+
     <div id="one" style="background-image: url(/images/analogue-art-box-chest-366791.jpg);">
     <h1 class="text" style="font-family: cursive; text-align: right; margin-right: 5vw; color: #f2d362;">Treasure <br> Hunt</h1>
     </div>
-    <div class="backdrop">
+    <!-- <div class="backdrop">
         <p class="text lighten">This is working</p>
-    </div>
+    </div> -->
+
     <!-- <div id="two" style="background-image: url(/images/man-in-brown-suit-standing-beside-woman-wearing-black-coat-3775592.jpg);">
         <h1 class="text" style="text-align: center;">Hello</h1>
     </div> -->
