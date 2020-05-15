@@ -8,6 +8,18 @@ module.exports.start = function(req, res){
         title: "start game"
     });
 }
+module.exports.check = function(req, res){
+    console.log(req.body)
+    if(req.body.password == 'treasurehunt'){
+        return res.render('correct',{
+            title: "correct answer"
+        });
+    }else{
+        return res.render('wrong',{
+            title: "Wrong answer"
+        });
+    }
+}
 
 module.exports.unavail = function(req, res){
 
