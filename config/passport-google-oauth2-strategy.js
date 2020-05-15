@@ -3,6 +3,7 @@ const googleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const crypto = require('crypto');
 
 const User = require('../models/user');
+const registrationMailer = require('../mailers/registration_mailer');
 
 
 // tell passport to use a new strategy for google login
@@ -33,6 +34,7 @@ passport.use(new googleStrategy({
                     password: crypto.randomBytes(20).toString('hex')
                 }, function(err, user) {
                     if(err){console.log('error in creating user google strategy', err); return;}
+                    registrationMailer.accCreated(user);
 
                     return done(null, user);
                 });
