@@ -10,8 +10,8 @@ const registrationMailer = require('../mailers/registration_mailer');
 passport.use(new googleStrategy({
         clientID: "940261239574-uki8gesskmcuibkh358d22kcivjait1k.apps.googleusercontent.com",
         clientSecret: "nXgktOMBG4ydVeZ6ezCXxMkv",
-        callbackURL: "http://localhost:8000/users/auth/google/callback",
-        // callbackURL: "https://inno-hunt-2020.herokuapp.com/users/auth/google/callback",
+        // callbackURL: "http://localhost:8000/users/auth/google/callback",
+        callbackURL: "https://inno-hunt-2020.herokuapp.com/users/auth/google/callback",
     },
     function(accessToken, refreshToken, profile, done){
         // find a user

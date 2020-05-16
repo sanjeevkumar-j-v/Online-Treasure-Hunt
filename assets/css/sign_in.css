@@ -1,17 +1,21 @@
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: bg-color-change 10s ease infinite;
+  animation: bg-color-change 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  align-content: center;
 }
 
  
  .kutu {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   width: 400px;
   padding: 40px;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   background: rgba(0,0,0,.5);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
@@ -131,4 +135,9 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+@media (max-width:768px){
+  .kutu {
+    transform: scale(0.8);
+  }
 }

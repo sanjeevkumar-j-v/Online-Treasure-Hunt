@@ -14,6 +14,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    level: {
+        type: Number
+    },
+    degree: {
+        type: String
+    },
     year: {
         type: Number
     },
@@ -22,6 +28,9 @@ const userSchema = new mongoose.Schema({
     },
     phone: {
         type: Number
+    },
+    address: {
+        type: String
     }
 }, {
     timestamps: true

@@ -9,7 +9,7 @@ rel="stylesheet">
         animation: bg-color-change 3s ease infinite;
         font-family: Fredoka One;
         color: white;
-        font-size: 5vw;
+        font-size: 2.5vw;
         text-align: center;
         
     }
@@ -33,7 +33,18 @@ rel="stylesheet">
     body::-webkit-scrollbar {
         display: none;
     }
+    a{
+        /* text-decoration: none; */
+        font-family: inherit;
+        color: inherit;
+    }
+    img {
+            width: 30vw;
+        }
     @media (max-width:768px){
+        body {
+            font-size: 5vw;
+        }
         img {
             width: 70vw;
         }
@@ -50,7 +61,9 @@ rel="stylesheet">
         <p>The password is incorrect</p>
         
         <img  src="/images/try-again.png" alt="Level upgraded Image">
-        <br>
+        <br><br>
+
+        <a href="/back">Back</a>
     </div>
 
 </body>

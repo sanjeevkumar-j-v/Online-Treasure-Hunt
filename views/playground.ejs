@@ -1,28 +1,55 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <link rel="stylesheet" href="/css/playground.css">
 <link rel="stylesheet" href="/css/animsta.css">
 
-<link rel="stylesheet" type="text/css" href="/css/effeckt.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Web-Fonts -->
 <link
 href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
 rel="stylesheet">
+
 <body>
-    <!-- <div>
-        <p> <%= user.name %> ,  <%= user %></p>
-        <h1 class="text" style="color: rgb(255, 255, 0); margin-bottom: -100vh;">Welcome Back! <br>
-             <small> <%= user.name %> </small> </h1>
-        
-    </div> -->
+   
     <div id="home">
-        <div style=" font: bolder 4vw ''; font-family: Fredoka One; padding: 3vw; padding-top: 28vh;">
-        <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome </h1>
-        <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name%> </h3>  
-        <button class="text-focus-in" style="font-family: inherit;  width: 150px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #fb7c55, #e41967);">continue</button>
-        
+        <nav id="navigator">
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href=""><li>Profile</li></a>
+                <a href="/users/sign-out"><li>Sign Out</li></a>
+    
+            </ul>
+        </nav>
+        <div>
+            <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome </h1>
+            <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name%> </h3>  
+            <button id="continue" class="text-focus-in">
+                continue
+            </button>
         </div>
     </div>
+
+
+
+    <div id="progress"></div>
+
+        <div class="center">
+        <div id="register">
+
+            <i id="progressButton" class="ion-android-arrow-forward next"></i>
+
+            <div id="inputContainer">
+            <input id="inputField" required autofocus />
+            <label id="inputLabel"></label>
+            <div id="inputProgress"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
 
     <div class="unselectable" id="question-container" >
         <p>C L U E</p>
@@ -41,6 +68,7 @@ rel="stylesheet">
             <li>Children's day plus teacher's day plus sundar  c birthday month</li>
         </ol>
         <br>
+        <p id="ans">Do you get the final answer?</p>
         <small style="font-family: monospace; ">H I N T : Alphabets</small>
         <!-- <br><br> -->
         <!-- <h1>Questions will be displayed soon</h1> -->
@@ -49,19 +77,95 @@ rel="stylesheet">
     <img id="soln-bg" src="/images/think-mob.png" alt="">
 
     <div  id="solution" >
-        <div class="img-container kenburns-right"></div>
+        <div class="img-container kenburns-right"><img style="width: 100%;" src="/images/think.png" alt=""></div>
         <div id="soln-form">
             <form  action="/playground/check" method="post">
-                <p class="tracking-in-expand">Hey there, <br> Type password here <br>  <span style="font-size: 120%;">To Unlock Next Level</span></p>
+                <p class="tracking-in-expand">
+                    Hey there, <br> 
+                    <span style="font-size: 110%;">Type password here</span> <br> 
+                    <span style="font-size: 120%;">To Unlock Next Level</span> <br>
+                    <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                        <span style="font-size: 40%;"> Question <i class="fas fa-question-circle"></i> </span>
+                    </a>
+                </p>
                 <div class="jello-horizontal" id="answer">
-                <input style="font-family: inherit;  width: 250px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #f3f646, #ff9a27);" name="password" placeholder="Type here" type="text"> 
+                <input style="font-family: inherit;  width: 250px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #f3f646, #ff9a27);" name="password" placeholder="Type here" type="text" required autofocus> 
                 <button class=" focus-in-contract-bck" style="font-family: inherit;  width: 150px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #fb7c55, #e41967);" type="submit">submit</button>
                 </div>
             </form>
         </div>
     </div>
 
+    <script>
 
+        // var navItems = document.querySelectorAll("#navigator ul a");
+        var navItem = document.getElementById('continue');
+        var interval;
+        var endPoint = 0;
+
+        // for(let i=0; i<navItems.length;i++) {
+            navItem.addEventListener('click',function(event) {
+                
+                var targetId = 'solution';//this.textContent.trim().toLowerCase();
+                // if (targetId == 'contact')
+                //     endPoint = 200;
+                // else
+                endPoint = 10;
+                event.preventDefault();
+                var targetSection = document.getElementById(targetId);
+                interval = setInterval(scrollVertically, 2, targetSection);
+            });
+        // }
+
+        document.getElementById('ans').addEventListener('click',function(event) {
+                
+                var targetId = 'solution';//this.textContent.trim().toLowerCase();
+                // if (targetId == 'contact')
+                //     endPoint = 200;
+                // else
+                endPoint = 10;
+                event.preventDefault();
+                var targetSection = document.getElementById(targetId);
+                interval = setInterval(scrollVertically, 2, targetSection);
+            });
+
+        function scrollVertically(targetSection) {
+            var targetCoordinates = targetSection.getBoundingClientRect();
+            if (targetCoordinates.top<=endPoint)
+            {
+                clearInterval(interval);
+                return;
+            }
+            window.scrollBy(0,10);
+        }
+
+
+
+        // question-container
+
+
+        var interval_q;
+        var endPoint_q = 0;
+        
+        document.getElementById('ques').addEventListener('click',function(event) {
+            endPoint_q = 10;
+            event.preventDefault();
+            var targetSection_q = document.getElementById('question-container');
+            interval_q = setInterval(scrollVertically_q, 2, targetSection_q);
+        });
+
+        function scrollVertically_q(targetSection_q) {
+            var targetCoordinates_q = targetSection_q.getBoundingClientRect();
+            if (targetCoordinates_q.top>endPoint_q)
+            {
+                clearInterval(interval_q);
+                return;
+            }
+            window.scrollBy(0,-10);
+        }
+
+
+    </script>
   
 
 </body>

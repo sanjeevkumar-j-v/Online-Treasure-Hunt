@@ -1,9 +1,16 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <link rel="stylesheet" href="/css/sign_in.css">
 
-<body>
-   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<body style="transform: scale(0.85);">
+   
+    <div style=" position: absolute; left: 0; bottom: -15; ">
+        <a style="text-decoration: none; font-size: 40px; color: white;" href="/"><i class="fas fa-home"></i> </a>
+    </div>
     <form action="/users/create" method="POST" class="kutu">
         <div class="form-giris">
             <input type="text" name="name" required>
@@ -37,10 +44,10 @@
     
 
 
-    <div class="kayit-yazi">Already have an account? <a href="/users/sign-in/">SIGN-IN</a></div>
+    <div class="kayit-yazi">Already have an account? <br> <a href="/users/sign-in/">SIGN-IN <i class="fas fa-sign-in-alt"></i></a></div>
     </form>
-    </div>
-    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 </body>

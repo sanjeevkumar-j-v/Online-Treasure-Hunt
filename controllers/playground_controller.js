@@ -9,8 +9,8 @@ module.exports.start = function(req, res){
     });
 }
 module.exports.check = function(req, res){
-    console.log(req.body)
-    if(req.body.password == 'treasurehunt'){
+    // console.log(req.body)
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'treasurehunt'){
         return res.render('correct',{
             title: "correct answer"
         });

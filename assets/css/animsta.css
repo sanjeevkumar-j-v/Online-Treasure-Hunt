@@ -242,8 +242,8 @@
               transform-origin: 84% 50%;
     }
     100% {
-      -webkit-transform: scale(1.25) translateX(20px);
-              transform: scale(1.25) translateX(20px);
+      -webkit-transform: scale(1.35) translateX(20px);
+              transform: scale(1.35) translateX(20px);
       -webkit-transform-origin: right;
               transform-origin: right;
     }
@@ -256,8 +256,8 @@
               transform-origin: 84% 50%;
     }
     100% {
-      -webkit-transform: scale(1.25) translateX(20px);
-              transform: scale(1.25) translateX(20px);
+      -webkit-transform: scale(1.35) translateX(20px);
+              transform: scale(1.35) translateX(20px);
       -webkit-transform-origin: right;
               transform-origin: right;
     }
