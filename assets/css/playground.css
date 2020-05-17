@@ -101,6 +101,8 @@ body::-webkit-scrollbar{
 #questions li:hover {
     font-size: 120%;
 }
+/* #questions li::selection { background: transparent; } */
+/* #questions li::-moz-selection { background: transparent; } */
 .text {
     font: bolder 3vw "Alfa Slab One";
     text-align: center;
