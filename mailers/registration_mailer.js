@@ -10,7 +10,7 @@ exports.accCreated = (user) => {
         from: 'sanjeevkumarjv@gmail.com',
         to: user.email,
         subject: "Inno Hunt",
-        html: htmlString
+        html: "<h1>mailer is working</h1>"//htmlString
     }, (err, info) => {
         if(err) { console.log('Error in sending mail', err); return;}
 

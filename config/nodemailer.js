@@ -10,10 +10,6 @@ let transporter = nodemailer.createTransport({
     auth: {
         user: 'sanjeevkumarjv',
         pass: 'sanjeev28'
-    },
-    tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false
     }
 
 });
