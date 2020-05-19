@@ -1,6 +1,10 @@
 const User = require('../models/user');
 const registrationMailer = require('../mailers/registration_mailer');
 
+module.exports.wait = function(req, res){
+    return res.render('wait',{title: 'wait'});
+}
+
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
         return res.redirect('/playground');

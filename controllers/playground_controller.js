@@ -1,5 +1,6 @@
 const passport = require('passport');
 const User = require("../models/user");
+const One = require("../models/one");
 
 
 module.exports.start = function(req, res){
@@ -11,6 +12,17 @@ module.exports.start = function(req, res){
 module.exports.check = function(req, res){
     // console.log(req.body)
     if((req.body.password).trim().toLowerCase().split(" ").join("") == 'treasurehunt'){
+
+        // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
+        //     if(err){
+        //         console.log("Error on changing user level")
+        //     }
+
+        // });
+        User.findByIdAndUpdate( {_id: req.user.id}, {level: 2}, function(err, result){
+            // console.log(result);
+        });
+        One.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
         });

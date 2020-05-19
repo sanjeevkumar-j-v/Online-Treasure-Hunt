@@ -10,7 +10,7 @@ exports.accCreated = (user) => {
         from: 'sanjeevkumarjv@gmail.com',
         to: user.email,
         subject: "Inno Hunt",
-        html: "<h4>Hey there, </h4> <br> <h1>Your registration for the online treasure hunt is confirmed.</h1>"//htmlString
+        html: "<h2>Hey there, </h2> <br> <h1>Your registration for the online treasure hunt is confirmed.</h1><br> <h4>Level 1 starts on may 24 and ends on may 25. <br> </h4>"//htmlString
     }, (err, info) => {
         if(err) { console.log('Error in sending mail', err); return;}
 
