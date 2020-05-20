@@ -41,8 +41,12 @@
         #head-logo {
             width: 100px; border-radius: 10px;
         }
-        .points li{
+        .points>li{
             list-style: decimal;
+            margin-left: 20px;
+        }
+        .points ul li{
+            list-style: disc;
             margin-left: 20px;
         }
         @media (max-width:668px){
@@ -103,10 +107,10 @@
                                         <a class="page-scroll" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#innovation">Innovate</a>
+                                        <a class="page-scroll" href="#who">Who</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
+                                        <a class="page-scroll" href="#about">Rules</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#why">Why</a>
@@ -132,7 +136,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="header-hero-content text-center">
-                            <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" style="font-size: 120%;">Mepco Schlenk Engineering College (Autonomous), Sivakasi</h3>
+                            <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" style="font-size: 150%;">Mepco Schlenk Engineering College (Autonomous), Sivakasi</h3>
                             <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Inno Hunt - Club Innovative</h3>
                             <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Online Treasure Hunt</h2>
                             <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Welcome to the world of hunters  </p>
@@ -237,10 +241,11 @@
                                 <li>Grateful <b>faculties</b> of Mepco</li>
                                 <li>Our superior <b>passed out students</b> of Mepco</li>
                             </ol>
-                            <br>
                             And this is a <b>single player</b> Game.
-                            
-                        </p>                        <a href="#" class="main-btn">Join</a>
+                            </p>           
+                        <br>
+                        
+                        <a href="#" class="main-btn">Join</a>
                     </div> <!-- about content -->
                 </div>
                 <div class="col-lg-6">
@@ -259,7 +264,7 @@
         <div class="about-shape-2">
             <img src="assets/images/about-shape-2.svg" alt="shape">
         </div>
-        <div class="container">
+        <div id="steps" class="container">
             <div class="row">
                 <div class="col-lg-6 order-lg-last">
                     <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -272,8 +277,16 @@
                                 <li>Create an account, with just 2 clicks</li>
                                 <li>Before that, check the rules of the Game</li>
                                 <li>Get ready to explore new things</li>
+
+                                <h6 >Event schedule : </h6>
+                                    <ul>
+                                        <li>Day 1,2 - Registration</li>
+                                        <li>Day 3 - Registration + level 1</li>
+                                        <li>Day 4 also level 1</li>
+                                        <li>Day 5,6,7,8,9,10,11 - Level 2,3,4,5,6,7,8 respectively</li>
+                                    </ul>
+                                
                             </ol>
-                            
                         </p>
                         <a href="/users/wait" class="main-btn">Join</a>
                     </div> <!-- about content -->
@@ -301,14 +314,14 @@
                         </div> <!-- section title -->
                         <p class="text">
                             <ol class="points">
-                                <li>Registrations are open only for <b>3 days</b>.</li>
-                                <li>Event consists of <b>8 levels</b>.</li>
-                                <li>Each level will be conducted on <b>seperate days</b>.</li>
+                                <li>Registrations are available only for <b>3 days</b> and the hunt starts by the third day.</li>
+                                <li>Registration opens on <b>May 22, 2020</b> at 10:00 AM and closes on May 24, 2020 - 10:00 PM (Fri - Sun)</li>
                                 <li>You have to <b>clear the current level</b> to get authenticated for next level.</li>
+                                <li>If you failed to clear the current level within the given time, then the upcoming levels will not be available for you.</li>
                                 <li>Clear a level using <b>password</b> and find it by solving the clues. <br>Clues are based on puzzles and cryptography.  </li>
                                 <li>The password contains <b>only alphabets</b> and doesn't have numbers and special characters.</li>
                                 <li>You can try checking the password only on the time between <b> 10:00AM to 10:00PM</b> and the questions will be displayed on remaining time.</li>
-                                <li>Keep visiting the website for regular updates</li>
+                                <li>Event ends on Jun 1, 2020 and the results will be announced on Jun 3, 2020</li>
                             </ol>
                             
                         </p>
@@ -530,9 +543,10 @@
                                 </div>
                                 <ul class="link">
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#innovation">Innovate</a></li>
-                                    <li><a href="#why">Why participate</a></li>
-                                    <li><a href="#about">Rules  </a></li>
+                                    <li><a href="#who">Who can participate</a></li>
+                                    <li><a href="#why">Why do I participate</a></li>
+                                    <li><a href="#steps">Schedule of the event</a></li>
+                                    <li><a href="#about">Rules for the Event </a></li>
                                     <li><a href="#how">How to play</a></li>
                                 </ul>
                             </div> <!-- footer wrapper -->
