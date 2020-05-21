@@ -42,13 +42,13 @@ module.exports.unavail = function(req, res){
                 console.log("Error in finding user on checking level")
                 return res.redirect('/');
             }
-            if(user.level == 1){
-                return res.render('playground_unavailable',{
-                    title: "Unavailable"
-                });
-            }else{
+            // if(user.level == 1){
+            //     return res.render('playground_unavailable',{
+            //         title: "Unavailable"
+            //     });
+            // }else{
                 return res.redirect('/playground');
-            }
+            // }
         });
 
     }

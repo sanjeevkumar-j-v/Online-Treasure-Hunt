@@ -38,7 +38,7 @@ module.exports.create = function(req, res){
             User.create(req.body, function(err, user){
                 if(err){console.log('Error in creating user in signing up'); return;}
                 console.log('User created : ',user);
-                registrationMailer.accCreated(user);
+                // registrationMailer.accCreated(user);
                 return res.redirect('/users/sign-in');
             })
         }else{
