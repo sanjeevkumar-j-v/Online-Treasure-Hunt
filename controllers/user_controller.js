@@ -7,7 +7,8 @@ module.exports.wait = function(req, res){
 
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
-        return res.redirect('/playground');
+        // return res.redirect('/playground');
+        return res.redirect('/playground/wait');
     }
     return res.render('sign_in',{
         title: "innohunt sign-in"
@@ -16,7 +17,9 @@ module.exports.signIn = function(req, res){
 
 module.exports.signUp = function(req, res){
     if(req.isAuthenticated()){
-        return res.redirect('/playground');
+        // return res.redirect('/playground');
+        return res.redirect('/playground/wait');
+
     }
 
     return res.render('sign_up',{
@@ -37,7 +40,7 @@ module.exports.create = function(req, res){
         if(!user) {
             User.create(req.body, function(err, user){
                 if(err){console.log('Error in creating user in signing up'); return;}
-                console.log('User created : ',user);
+                // console.log('User created : ',user);
                 // registrationMailer.accCreated(user);
                 return res.redirect('/users/sign-in');
             })
@@ -52,7 +55,9 @@ module.exports.create = function(req, res){
 
 // sign in  and create a session for user
 module.exports.createSession = function(req, res){
-    return res.redirect('/playground');
+    // return res.redirect('/playground');
+    return res.redirect('/playground/wait');
+
 }
 
 module.exports.destroySession = function(req, res){

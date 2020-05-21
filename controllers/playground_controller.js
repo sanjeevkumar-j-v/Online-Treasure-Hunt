@@ -2,13 +2,18 @@ const passport = require('passport');
 const User = require("../models/user");
 const One = require("../models/one");
 
+module.exports.wait = function(req, res){
 
-module.exports.start = function(req, res){
-
-    return res.render('playground',{
-        title: "start game"
+    return res.render('wait_playground',{
+        title: "Successful registration"
     });
 }
+// module.exports.start = function(req, res){
+
+//     return res.render('playground',{
+//         title: "start game"
+//     });
+// }
 module.exports.check = function(req, res){
     // console.log(req.body)
     if((req.body.password).trim().toLowerCase().split(" ").join("") == 'treasurehunt'){
@@ -19,7 +24,7 @@ module.exports.check = function(req, res){
         //     }
 
         // });
-        User.findByIdAndUpdate( {_id: req.user.id}, {level: 2}, function(err, result){
+        User.findByIdAndUpdate( {_id: req.user.id}, {level: 1}, function(err, result){
             // console.log(result);
         });
         One.insertMany({email: req.user.email, name: req.user.name});

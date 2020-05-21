@@ -18,7 +18,7 @@ passport.use(new googleStrategy({
         User.findOne({email: profile.emails[0].value}).exec(function(err, user){
             if(err){console.log('error in google strategy passport', err); return;}
 
-            console.log(profile);
+            // console.log(profile);
 
             if(user){
                 // if found, set this user as req.user
@@ -34,7 +34,7 @@ passport.use(new googleStrategy({
                     password: crypto.randomBytes(20).toString('hex')
                 }, function(err, user) {
                     if(err){console.log('error in creating user google strategy', err); return;}
-                    registrationMailer.accCreated(user);
+                    // registrationMailer.accCreated(user);
 
                     return done(null, user);
                 });
