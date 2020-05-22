@@ -20,3 +20,7 @@ module.exports.reminder = function(req, res){
     });
 }
 
+module.exports.testing = function(req, res){
+    return res.render('new');
+}
+

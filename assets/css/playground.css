@@ -32,7 +32,7 @@ body::-webkit-scrollbar{
     font-size: 30px;
 }
 #home {
-    background-image: url(/images/home-bg.png);
+    background-image: url(/images/home-bg-l.png);
     background-position: center;
     background-size: cover;
     /* background-attachment: fixed; */
@@ -52,7 +52,7 @@ body::-webkit-scrollbar{
     font-family: inherit;  
     width: 150px; 
     border: 0; 
-    padding: 15px; 
+    padding: 13px; 
     margin: 20px 0; 
     border-radius: 20px; 
     font-size: 20px; 
@@ -160,6 +160,23 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
 }
+#answer input,button{
+    font-family: inherit; 
+    border: 0; 
+    padding: 15px; 
+    margin: 20px 0; 
+    border-radius: 20px; 
+    font-size: 20px; 
+    color: white; 
+}
+#answer input{
+    width: 250px; 
+    background: linear-gradient(-45deg, #f3f646, #ff9a27);
+}
+#answer button {
+    width: 150px;
+    background: linear-gradient(-45deg, #fb7c55, #e41967);
+}
 #soln-bg {
     display: none;
 }
@@ -197,7 +214,7 @@ body::-webkit-scrollbar{
     /* margin: -2px; */
 }
 
-@media (max-width:768px){
+@media (max-width:668px){
     #home>div {
         padding-top: 28vh;
         padding-left: 30px;
@@ -207,6 +224,11 @@ body::-webkit-scrollbar{
     }
     #navigator ul a:hover {
         font-size: 20px;
+    }
+    #continue {
+        width: 90px;
+        font-size: 12px;
+        padding: 7px;
     }
     #soln-bg {
         display: block;
@@ -218,6 +240,7 @@ body::-webkit-scrollbar{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        align-content: center;
     }
     .img-container {
         display: none;
@@ -227,23 +250,99 @@ body::-webkit-scrollbar{
 
         color: #e74100;  
         /* font: bolder 4vw '' ;  */
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         font-family: Fredoka One; 
         height: 100%; 
         padding: 20px;
         /* padding: 5vh 5vw 0vw 50px;  */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
     #answer {
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        padding: 10%;
+        
+        /* padding: 10%; */
         border: 5px solid orange;
         border-radius: 30px;
         box-sizing: border-box;
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    }
+    #answer input{
+        width: 150px;
+    }
+    #answer button{
+        width: 100px;
+    }
+    .text {
+        font-size: 35px;
+
+    }
+}
+
+@media (max-height:258px){
+    #home>div {
+        padding-top: 28vh;
+        padding-left: 30px;
+    }
+    #navigator ul a{
+        font-size: 19px;
+    }
+    #navigator ul a:hover {
+        font-size: 25px;
+    }
+    #continue {
+        width: 90px;
+        font-size: 12px;
+        padding: 7px;
+    }
+  
+    #solution{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+ 
+    #soln-form {
+
+        color: #e74100;  
+        /* font: bolder 4vw '' ;  */
+        font-size: 20px;
+        text-align: center;
+        font-family: Fredoka One; 
+        height: 100%; 
+        padding: 20px;
+        /* padding: 5vh 5vw 0vw 50px;  */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    #answer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* padding: 10%; */
+        border: 5px solid orange;
+        border-radius: 30px;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    }
+    #answer input{
+        width: 150px;
+    }
+    #answer button{
+        width: 100px;
     }
     .text {
         font-size: 35px;
