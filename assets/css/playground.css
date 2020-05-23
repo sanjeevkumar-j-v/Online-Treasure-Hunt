@@ -335,11 +335,14 @@ footer div{
     #answer button{
         width: 100px;
     }
+    #answer i {
+        font-size: 60px;
+    }
     .text {
         font-size: 35px;
     }
     footer div{
-        font-size: 15px;
+        font-size: 12px;
         margin: 20px;
         padding: 10px;
         border-radius: 20px;
@@ -347,7 +350,7 @@ footer div{
         justify-content: center;
         align-items: center;
         align-content: center;
-        line-height: 12px;
+        line-height: 14px;
     }
 }
 
