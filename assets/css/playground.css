@@ -116,9 +116,9 @@ body::-webkit-scrollbar{
 .text {
     font: bolder 3vw "Alfa Slab One";
     text-align: center;
-    height: 100%;
+    /* height: 100%; */
     font-family: Fredoka one;
-    padding: 12vh 5vw;
+    /* padding: 12vh 5vw; */
     /* border: 4px solid; */
 }
 .backdrop {
@@ -180,6 +180,7 @@ body::-webkit-scrollbar{
     border-radius: 20px; 
     font-size: 20px; 
     color: white; 
+    transition-duration: 0.5s;
 }
 #answer input{
     width: 250px; 
@@ -189,11 +190,37 @@ body::-webkit-scrollbar{
     width: 150px;
     background: linear-gradient(-45deg, #da4f24, #e41967);
 }
+#answer button:hover {
+    cursor: pointer;
+}
 #soln-bg {
     display: none;
 }
 
-
+footer {
+    color: ivory;
+    background: linear-gradient(-45deg, #da4f24, #e41967);
+    font: 100 3vh "Alfa Slab One";
+    text-align: center;
+    font-family: Fredoka one;
+    background-image: url(/images/2861.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+}
+footer div{
+    background-color: rgba(238, 0, 0, 0.26);
+    border: 2px solid white;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    line-height: 35px;
+}
 
 .multiply {
     color: white;
@@ -225,14 +252,32 @@ body::-webkit-scrollbar{
     height: auto;
     /* margin: -2px; */
 }
+.glow {
+    /* font-size: 80px; */
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
 
 @media (max-width:668px){
     #home>div {
         padding-top: 28vh;
-        padding-left: 30px;
+        padding-left: 22px;
     }
     #navigator ul a{
-        font-size: 10px;
+        font-size: 8px;
         border: 3px solid white;
     }
     #navigator ul a:hover {
@@ -279,8 +324,6 @@ body::-webkit-scrollbar{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-        /* padding: 10%; */
         border: 5px solid orange;
         border-radius: 30px;
         box-sizing: border-box;
@@ -294,7 +337,17 @@ body::-webkit-scrollbar{
     }
     .text {
         font-size: 35px;
-
+    }
+    footer div{
+        font-size: 10px;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        line-height: 12px;
     }
 }
 

@@ -15,40 +15,41 @@ rel="stylesheet">
         <nav id="navigator">
             <ul>
                 <a href="/"><li>Home</li></a>
-                <!-- <a href=""><li>Profile</li></a> -->
                 <a href="/users/sign-out"><li>Sign Out</li></a>
+                
     
             </ul>
         </nav>
         <div>
             <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome </h1>
-            <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name%> </h3>  
+            <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name %> </h3>  
+
             <button id="continue" class="text-focus-in">
-                continue
+                Continue
             </button>
         </div>
     </div>
 
     
 
-    <div class="unselectable" id="question-container" >
+    <div class="" id="question-container" >
         <p>C L U E</p>
         <ol id="questions" class="tracking-in-expand" >
             <li>Twice the number of hostels in our Mepco college</li>
             <li>Number of mei eluthukkal</li>
-            <li>Cost of vadai in our college</li>
+            <li>Number of oceans in the world</li>
             <li>Labours day</li>
             <!-- <li>Cost of unlimited calls pack with 200mb data for 2 days in airtel</li> -->
-            <li>Number of balls in 3 overs with a whide</li>
+            <li>Number of balls in 3 overs with a wide ball</li>
             <li>Andrea pirlo jersey number</li>
             <li>Mother’s day plus  women’s day</li>
-            <li>Number of biscuits in oreo 10rs pack</li>
+            <li>Number of biscuits in 10 rupees Oreo pack</li>
             <li>How many legs does a spider have</li>
             <li>Number of districts in kerala plus number of days in a week</li>
             <li>Diwali date of current year</li>
             <li>Children's day plus teacher's day plus sundar  c birthday month</li>
         </ol>
-        <br>
+        
         <p id="ans">Click here to answer</p>
         <hr>
         <small style="font-family: monospace; ">Visit later for Hints</small>
@@ -59,24 +60,37 @@ rel="stylesheet">
     <img id="soln-bg" src="/images/think-mob.png" alt="">
 
     <div  id="solution" >
-        <div class="img-container kenburns-right"><img style="width: 100%;" src="/images/think.png" alt=""></div>
-        <div id="soln-form">
-            <form  action="/playground/check" method="post">
+        <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+        <div id="soln-form" >
+            <form  action="" method="post">
                 <p class="tracking-in-expand">
-                    Hey there, <br> 
+                    <span style="color: #db095a;">Hey there,</span> <br> 
                     <span style="font-size: 110%;">Type password here</span> <br> 
                     <span style="font-size: 120%;">To Unlock Next Level</span> <br>
                     <a id="ques" style="text-decoration: none; color: inherit;" href="">
-                        <span style="font-size: 40%;">Click here for Question <i class="fas fa-question-circle"></i> </span>
+                        <span style="font-size: 40%; color: rgb(10, 10, 128);">Click here for Question <i class="fas fa-question-circle"></i> </span>
                     </a>
                 </p>
                 <div class="jello-horizontal" id="answer">
-                <input style="font-family: inherit;  width: 250px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #f3f646, #ff9a27);" name="password" placeholder="Type here" type="text" required > 
-                <button class=" focus-in-contract-bck" style="font-family: inherit;  width: 150px; border: 0; padding: 15px; margin: 20px 0; border-radius: 20px; font-size: 20px; color: white; background: linear-gradient(-45deg, #fb7c55, #e41967);" type="submit">submit</button>
+                    <h6 style="padding: 5px; color: rgb(70, 14, 223);">You can check your answer in the time between 10:00 AM to 10:00 PM</h6>
                 </div>
             </form>
         </div>
     </div>
+
+    <footer>
+        <h1>Inno Hunt</h1>
+        <div >
+            <ol style="text-align: left;">
+                <li>You can answer only in the time between 10:00 AM to 10:00 PM (12 hrs)</li>
+                <li>Questions are displayed on the remaining time (i.e from 12:00 AM to 11:59 PM). </li>
+                <li>If you failed to answer within the given time, then you can't enter into next level.</li>
+                <li>Each level takes place on each day (except level one - 2 days)</li>
+                
+            </ol>
+        </div>
+    </footer>
+
 
     <script>
 

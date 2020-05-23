@@ -8,12 +8,12 @@ module.exports.wait = function(req, res){
         title: "Successful registration"
     });
 }
-// module.exports.start = function(req, res){
+module.exports.start = function(req, res){
 
-//     return res.render('playground',{
-//         title: "start game"
-//     });
-// }
+    return res.render('playground',{
+        title: "start game"
+    });
+}
 module.exports.check = function(req, res){
     // console.log(req.body)
     if((req.body.password).trim().toLowerCase().split(" ").join("") == 'treasurehunt'){
