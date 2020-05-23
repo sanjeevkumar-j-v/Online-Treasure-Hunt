@@ -231,8 +231,8 @@
     }
   }
   .kenburns-right {
-	-webkit-animation: kenburns-right 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate-reverse both;
-	        animation: kenburns-right 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate-reverse both;
+	-webkit-animation: kenburns-right 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) 5 alternate-reverse both;
+	        animation: kenburns-right 5s cubic-bezier(0.680, -0.550, 0.265, 1.550) 5 alternate-reverse both;
 }
 @-webkit-keyframes kenburns-right {
     0% {
