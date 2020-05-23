@@ -18,7 +18,7 @@ module.exports.signIn = function(req, res){
 module.exports.signUp = function(req, res){
     if(req.isAuthenticated()){
         // return res.redirect('/playground');
-        return res.redirect('/playground/wait');
+        return res.redirect('/playground/');
 
     }
 
