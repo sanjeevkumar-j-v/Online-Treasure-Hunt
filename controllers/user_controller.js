@@ -8,7 +8,7 @@ module.exports.wait = function(req, res){
 module.exports.signIn = function(req, res){
     if(req.isAuthenticated()){
         // return res.redirect('/playground');
-        return res.redirect('/playground/wait');
+        return res.redirect('/playground/');
     }
     return res.render('sign_in',{
         title: "innohunt sign-in"
