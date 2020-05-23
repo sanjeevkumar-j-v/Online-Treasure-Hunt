@@ -214,11 +214,12 @@ footer {
     font: 100 3vh "Alfa Slab One";
     text-align: center;
     font-family: Fredoka one;
+    padding: 30px;
     /* background-image: url(/images/footerbg.jpg);
     background-size: cover;
     background-position: left;
     background-attachment: fixed; */
-    height: 66vh;
+    /* height: 66vh; */
 }
 footer div{
     background-color: rgba(238, 222, 0, 0.144);
@@ -358,9 +359,12 @@ footer div{
     .text {
         font-size: 35px;
     }
+    footer{
+        padding: 10px;
+    }
     footer div{
         font-size: 12px;
-        margin: 20px;
+        margin: 15px;
         padding: 10px;
         border-radius: 20px;
         display: flex;
