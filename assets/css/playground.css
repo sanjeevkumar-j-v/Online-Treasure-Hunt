@@ -289,8 +289,9 @@ footer div{
         padding-left: 22px;
     }
     #navigator ul a{
-        font-size: 8px;
+        font-size: 13px;
         border: 3px solid white;
+        padding: 7px;
     }
     #navigator ul a:hover {
         font-size: 20px;
