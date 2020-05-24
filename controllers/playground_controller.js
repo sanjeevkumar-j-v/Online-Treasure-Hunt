@@ -10,7 +10,7 @@ module.exports.wait = function(req, res){
 }
 module.exports.start = function(req, res){
 
-    return res.render('playground',{
+    return res.render('new',{
         title: "start game"
     });
 }
