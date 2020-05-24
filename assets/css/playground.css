@@ -108,6 +108,9 @@ body::-webkit-scrollbar{
     border-radius: 10px;
     transition-duration: 0.3s;
 }
+#questions li img {
+    width: 100%;
+}
 #questions li:hover {
     font-size: 120%;
 }
