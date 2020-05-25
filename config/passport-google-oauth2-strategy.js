@@ -26,18 +26,18 @@ passport.use(new googleStrategy({
             }else{
                 // if not found, create a user and set it as req.user
 
-                // return done(null, false, { message: 'user unavailable' });
+                return done(null, false, { message: 'user unavailable' });
 
-                User.create({
-                    name: profile.displayName,
-                    email: profile.emails[0].value,
-                    password: crypto.randomBytes(20).toString('hex')
-                }, function(err, user) {
-                    if(err){console.log('error in creating user google strategy', err); return;}
-                    // registrationMailer.accCreated(user);
+                // User.create({
+                //     name: profile.displayName,
+                //     email: profile.emails[0].value,
+                //     password: crypto.randomBytes(20).toString('hex')
+                // }, function(err, user) {
+                //     if(err){console.log('error in creating user google strategy', err); return;}
+                //     // registrationMailer.accCreated(user);
 
-                    return done(null, user);
-                });
+                //     return done(null, user);
+                // });
             }
         });
     }
