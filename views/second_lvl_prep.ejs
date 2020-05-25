@@ -24,10 +24,11 @@ rel="stylesheet">
         <div>
             <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome </h1>
             <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name %> </h3>  
-
+            <% if(user.level){ %>
             <button id="continue" class="text-focus-in">
                 Continue
             </button>
+            <% } %>
         </div>
     </div>
 
@@ -106,7 +107,7 @@ rel="stylesheet">
 
 
     <% } %>
-
+    <% if(user.level){ %>
     <footer>
         <h3> Inno Hunt - Rules</h3>
         <div >
@@ -119,7 +120,7 @@ rel="stylesheet">
             </ol>
         </div>
     </footer>
-
+    <% } %>
     <script>
 
         // var navItems = document.querySelectorAll("#navigator ul a");
