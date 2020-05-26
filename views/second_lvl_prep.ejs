@@ -32,15 +32,15 @@ rel="stylesheet">
         </div>
     </div>
 
-    <% if(user.level == 2){ %>
+    <% if(user.level == 3){ %>
  
         <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
-            <h1>Hey you have completed level Two!</h1>
+            <h1>Hey you have completed level Three!</h1>
             <h3>Kindly wait for the next level</h3>
-            <p>Level 3 opens on Tomorrow 10:00 AM</p>
+            <p>Level 4 opens on Tomorrow 10:00 AM</p>
         </div>
 
-    <%}else if(user.level == 1){%>
+    <%}else if(user.level == 2){%>
 
 
         <div class="" id="question-container" >
@@ -107,7 +107,7 @@ rel="stylesheet">
 
 
     <% } %>
-    <% if(user.level){ %>
+    <% if(user.level > 1){ %>
     <footer>
         <h3> Inno Hunt - Rules</h3>
         <div >
@@ -115,7 +115,7 @@ rel="stylesheet">
                 <li>You can answer only in the time between 10:00 AM to 10:00 PM (12 hrs)</li><br>
                 <li>Questions are displayed on the remaining time (i.e from 12:00 AM to 11:59 PM). </li><br>
                 <li>If you failed to answer within the given time, then you can't enter into next level.</li><br>
-                <li>Each level takes place on each day (except level one - 2 days)</li><br>
+                <li>Each level takes place on each day</li><br>
                 <li>You can try checking your answer for unlimited number of times</li>
             </ol>
         </div>
