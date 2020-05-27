@@ -1,6 +1,6 @@
 const passport = require('passport');
 const User = require("../models/user");
-const Two = require("../models/two");
+const Three = require("../models/three");
 
 module.exports.wait = function(req, res){
 
@@ -9,14 +9,19 @@ module.exports.wait = function(req, res){
     });
 }
 module.exports.start = function(req, res){
+    User.findById(req.user.id, function(err, user){
 
-    return res.render('playground',{
-        title: "play game"
-    });
+        // if(user.rollno){
+            return res.render('playground',{
+                title: "play game"
+            });
+  
+    })
+    
 }
 module.exports.check = function(req, res){
     // console.log(req.body)
-    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'lovnablago'){
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'kuvhimapfuma'){
 
         // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
         //     if(err){
@@ -24,10 +29,10 @@ module.exports.check = function(req, res){
         //     }
 
         // });
-        User.findByIdAndUpdate( {_id: req.user.id}, {level: 2}, function(err, result){
+        User.findByIdAndUpdate( {_id: req.user.id}, {level: 3}, function(err, result){
             // console.log(result);
         });
-        Two.insertMany({email: req.user.email, name: req.user.name});
+        Three.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
         });

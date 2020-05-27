@@ -57,9 +57,12 @@ module.exports.info = function(req, res){
 
 //     });
 // }
-
-
-
+// get the sign up data
+module.exports.add = function(req, res){
+   console.log(req.params);
+    User.findByIdAndUpdate( {_id: req.user.id}, {name: req.name, rollno : req.rollno, phone: req.phone, degree: req.degree }, function(err, result){})
+    return res.redirect('/playground');
+}
 // sign in  and create a session for user
 module.exports.createSession = function(req, res){
     // return res.redirect('/playground');

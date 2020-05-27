@@ -20,17 +20,12 @@ const userSchema = new mongoose.Schema({
     degree: {
         type: String
     },
-    year: {
-        type: Number
-    },
-    dept: {
-        type: String
-    },
     phone: {
         type: Number
     },
-    address: {
-        type: String
+    rollno: {
+        type: String,
+        unique: true
     }
 }, {
     timestamps: true

@@ -11,7 +11,7 @@
     <div style=" position: absolute; left: 0; bottom: -15; ">
         <a style="text-decoration: none; font-size: 40px; color: white;" href="/"><i class="fas fa-home"></i> </a>
     </div>
-    <form action="/users/" method="POST" class="kutu">
+    <form action="/users/add" method="GET" class="kutu">
         <div class="form-giris">
             <input type="text" name="name" value="<%= user.name%>" required>
             <label>Name <span style="font-size: 50%;">(To be displayed on certificate)</span> </label>
@@ -25,7 +25,7 @@
             <label>Roll Number</label>
         </div>
         <div class="form-giris">
-            <input type="text" name="phno" >
+            <input type="text" name="phone" >
             <label>Phone Number</label>
         </div>
         <div class="form-giris">
