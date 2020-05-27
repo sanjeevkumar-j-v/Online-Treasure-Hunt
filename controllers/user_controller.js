@@ -14,7 +14,15 @@ module.exports.signIn = function(req, res){
         title: "innohunt sign-in"
     });
 }
-
+module.exports.info = function(req, res){
+    if(!req.isAuthenticated()){
+        // return res.redirect('/playground');
+        return res.redirect('/playground/');
+    }
+    return res.render('add_info',{
+        title: "Additional information"
+    });
+}
 // module.exports.signUp = function(req, res){
 //     if(req.isAuthenticated()){
 //         return res.redirect('/playground/');
