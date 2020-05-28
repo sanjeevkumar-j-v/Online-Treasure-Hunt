@@ -1,6 +1,6 @@
 const passport = require('passport');
 const User = require("../models/user");
-const Three = require("../models/three");
+const Four = require("../models/four");
 
 module.exports.wait = function(req, res){
 
@@ -21,7 +21,7 @@ module.exports.start = function(req, res){
 }
 module.exports.check = function(req, res){
     // console.log(req.body)
-    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'kuvhimapfuma'){
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'skattejag'){
 
         // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
         //     if(err){
@@ -32,7 +32,7 @@ module.exports.check = function(req, res){
         User.findByIdAndUpdate( {_id: req.user.id}, {level: 3}, function(err, result){
             // console.log(result);
         });
-        Three.insertMany({email: req.user.email, name: req.user.name});
+        Four.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
         });
