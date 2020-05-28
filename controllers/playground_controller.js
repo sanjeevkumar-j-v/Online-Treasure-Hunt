@@ -29,7 +29,7 @@ module.exports.check = function(req, res){
         //     }
 
         // });
-        User.findByIdAndUpdate( {_id: req.user.id}, {level: 3}, function(err, result){
+        User.findByIdAndUpdate( {_id: req.user.id}, {level: 4}, function(err, result){
             // console.log(result);
         });
         Four.insertMany({email: req.user.email, name: req.user.name});
