@@ -29,9 +29,12 @@ module.exports.check = function(req, res){
         //     }
 
         // });
-        User.findByIdAndUpdate( {_id: req.user.id}, {level: 4}, function(err, result){
-            // console.log(result);
-        });
+
+        if(req.user.level != 99){
+            User.findByIdAndUpdate( {_id: req.user.id}, {level: 4}, function(err, result){
+                // console.log(result);
+            });
+        }
         Four.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
