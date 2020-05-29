@@ -285,7 +285,7 @@ footer div{
   }
 
 #questions li img {
-    width: 10%;
+    width: 8.5%;
 }
 
 @media (max-width:768px){
@@ -352,7 +352,7 @@ footer div{
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
     }
     #questions li img {
-        width: 10%;
+        width: 8.5%;
     }
     
     #answer input{
