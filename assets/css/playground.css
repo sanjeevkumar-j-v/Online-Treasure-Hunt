@@ -284,6 +284,10 @@ footer div{
     }
   }
 
+#questions li img {
+    width: 10%;
+}
+
 @media (max-width:768px){
     #home>div {
         padding-top: 28vh;
@@ -347,6 +351,10 @@ footer div{
         box-sizing: border-box;
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
     }
+    #questions li img {
+        width: 10%;
+    }
+    
     #answer input{
         width: 150px;
     }
