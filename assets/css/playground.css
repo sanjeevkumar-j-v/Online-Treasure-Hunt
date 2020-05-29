@@ -108,7 +108,12 @@ body::-webkit-scrollbar{
     border-radius: 10px;
     transition-duration: 0.3s;
 }
-
+#questions li img{
+    width: 8.5%;
+}
+#questions li:hover img{
+    width: 19%;
+}
 #questions li:hover {
     font-size: 120%;
 }
@@ -284,9 +289,6 @@ footer div{
     }
   }
 
-#questions li img {
-    width: 8.5%;
-}
 
 @media (max-width:768px){
     #home>div {
@@ -302,8 +304,8 @@ footer div{
         font-size: 20px;
     }
     #questions li img {
-        width: 100%;
-        border-radius: 3px;
+        border-radius: 2px;
+        width: 8.5%;
     }
     #continue {
         width: 90px;
@@ -351,9 +353,7 @@ footer div{
         box-sizing: border-box;
         box-shadow: 0 15px 25px rgba(0,0,0,.6);
     }
-    #questions li img {
-        width: 8.5%;
-    }
+
     
     #answer input{
         width: 150px;
