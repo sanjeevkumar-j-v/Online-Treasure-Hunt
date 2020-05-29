@@ -112,7 +112,7 @@ body::-webkit-scrollbar{
     width: 8.5%;
 }
 #questions li:hover img{
-    width: 19%;
+    width: 24%;
 }
 #questions li:hover {
     font-size: 120%;
