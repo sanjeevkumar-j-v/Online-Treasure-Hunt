@@ -239,7 +239,9 @@ footer div{
     align-content: center;
     line-height: 25px;
 }
-
+.key {
+    color: yellow;
+}
 .multiply {
     color: white;
     mix-blend-mode: multiply;
