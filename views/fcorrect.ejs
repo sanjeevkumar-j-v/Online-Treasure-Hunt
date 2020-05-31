@@ -72,27 +72,27 @@ rel="stylesheet">
              Five
             <%}%>
             of Final level</p>
-        <h6>
+        <h2>
             KEY : 
 
             <% if(!user.final || user.final == 0){%>
-                AE
+                A E
             <%}else if(user.final == 1){%>
-                SU
+                S U
             <%}else if(user.final == 2){%>
-                HT
+                H T
             <%}else if(user.final == 3){%>
-                MR
+                M R
             <%}else if(user.final == 4){%>
-                NVI
+                N V I
             <%}%>
 
-        </h6>
+        </h2>
         
         <img  src="/images/level-up.png" alt="Level upgraded Image">
         <br>
         <br>
-        <a href="/back"></a>
+        <a href="/back">
         <% if(user.final == 4){%>
         Finish
         <%}else{%>
