@@ -10,11 +10,6 @@ href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,30
 rel="stylesheet">
 
 
-<style>
-    .key {
-        color: yellow;
-    }
-</style>
 
 <body>
    
@@ -30,7 +25,7 @@ rel="stylesheet">
         <div>
             <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome </h1>
             <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name %> </h3>  
-            <% if(user.level == 6){ %>
+            <% if(user.level == 7){ %>
             <button id="continue" class="text-focus-in">
                 Continue
             </button>
@@ -38,78 +33,238 @@ rel="stylesheet">
         </div>
     </div>
 
-    <% if(user.level == 7){ %>
+    <% if(user.level == 8){ %>
  
         <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
-            <h1>Hey you have completed level Seven!</h1>
-            <h3>Kindly wait for the next level</h3>
-            <p>Level 8 opens on Tomorrow 10:00 AM</p>
+            <h1>Hey you have completed the Treasure Hunt</h1>
+            <h3>Results will be announced on Jun 4 or Jun 5</h3>
+            <p>Thanks for your participation</p>
         </div>
 
-    <%}else if(user.level > 4 || user.level == 99){%>
+    <%}else if(user.level == 7 || user.level == 99){%>
 
+        <% if(!user.final){ %>
+            <div class="" id="question-container" >
+                <p>SUB LEVEL 1 OF 5</p>
 
-        <div class="" id="question-container" >
-            <p>Q U E S T I O N S</p>
+                <ol   id="questions" class="tracking-in-expand" >
 
-            <ol  id="questions" class="tracking-in-expand" >
-
-            <li>
-                <span class="key">12325807</span> 7867 <i class="fas fa-arrow-up"></i>   76 6548 <i class="fas fa-arrow-right"></i> 
-            </li>
-            <li>
-                33 1959 <i class="fas fa-arrow-up"></i>    <span class='key'>1474248</span>7 3795 <i class="fas fa-arrow-left"></i>
-            </li>
-            <li> 33 4489 <i class="fas fa-arrow-down"></i>    <span class="key">21478569</span>0 6693 <i class="fas fa-arrow-left"></i>  </li>
-            <li> 35 4886 <i class="fas fa-arrow-up"></i>   13<span class="key">123258789</span> 4076 <i class="fas fa-arrow-right"></i> </li>
-            <li> <span class="key">3214789</span>7 5498 <i class="fas fa-arrow-up"></i>   45 0786 <i class="fas fa-arrow-right"></i> </li>
-            <li> 34 5553 <i class="fas fa-arrow-up"></i>   <span class="key">3214756</span>9 2075 <i class="fas fa-arrow-right"></i>  </li>
-            <li> <span class="key">7415963</span> 0755 <i class="fas fa-arrow-down"></i>   75 7342 <i class="fas fa-arrow-left"></i> </li>
-            <li> <span class="key">126874</span>1 2865 <i class="fas fa-arrow-down"></i>   174 7762 <i class="fas fa-arrow-right"></i> </li>
-            <li> 50 7753 <i class="fas fa-arrow-up"></i>   <span class="key">7412345</span> 0839 <i class="fas fa-arrow-right"></i> </li>
-            <li> 1 2921 <i class="fas fa-arrow-down"></i>   3<span class="key">3214756</span> 8219 <i class="fas fa-arrow-right"></i>   </li>
-            <li> 14 4064 <i class="fas fa-arrow-up"></i>   <span class="key">14789</span>0 9405 <i class="fas fa-arrow-right"></i>  </li>
-            <li> 5<span class="key">7412369456</span> 4868 <i class="fas fa-arrow-up"></i>   46 1251 <i class="fas fa-arrow-right"></i> </li>
-            <li> 37 5665 <i class="fas fa-arrow-up"></i>   <span class="key">14789</span>6 9780 <i class="fas fa-arrow-right"></i>  </li>
-            <li> 35 0116 <i class="fas fa-arrow-up"></i>   <span class="key">7415369</span>5 7681 <i class="fas fa-arrow-right"></i> </li>
-            <li> <span class="key">159357</span> 4539 <i class="fas fa-arrow-up"></i>   54 3773 <i class="fas fa-arrow-right"></i> </li>
-            <li> 2<span class="key">321478945</span> 7439 <i class="fas fa-arrow-up"></i>   89 2752 <i class="fas fa-arrow-right"></i> </li>
-            <li> <span class="key">14789</span> 9716 <i class="fas fa-arrow-up"></i>   77 5946 <i class="fas fa-arrow-right"></i>  </li>
-            <li> <span class="key">1235789</span> 3787 <i class="fas fa-arrow-up"></i>   127 8575 <i class="fas fa-arrow-right"></i> </li>
-        
-            </ol>
-            
-
-
-            <p id="ans">Click here to answer</p>
-            <hr>
-            <small style="font-family: monospace; ">Visit later for hints</small>
-            <!-- <br><br> -->
-            <!-- <h1>Questions will be displayed soon</h1> -->
-        </div>
-    
-        <img id="soln-bg" src="/images/3704081.jpg" alt="">
-    
-        <div  id="solution" >
-            <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
-            <div id="soln-form" >
-                <form  action="/playground/check" method="post">
-                    <p class="tracking-in-expand">
-                        <span style="color: #db095a;">Hey there,</span> <br> 
-                        <span style="font-size: 110%;">Type password here</span> <br> 
-                        <span style="font-size: 120%;">To Unlock Next Level</span> <br>
-                        <a id="ques" style="text-decoration: none; color: inherit;" href="">
-                            <span style="font-size: 40%; color: rgb(10, 10, 128);">Click here for Question <i class="fas fa-question-circle"></i> </span>
-                        </a>
-                    </p>
-                    <div class="jello-horizontal" id="answer">
-                    <input name="password" placeholder="Type here" type="text" required > 
-                    <button class=" focus-in-contract-bck" type="submit">Submit</button>
-                    </div>
-                </form>
+                    <li>Question 1</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                <hr>
+                <small style="font-family: monospace; ">H i n t : </small>
             </div>
-        </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/fcheck" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the Sub Level 1</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);"> </span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <%}else if(user.final == 1){%>
+
+            <div class="" id="question-container" >
+                <p>SUB LEVEL 2 OF 5</p>
+
+                <ol   id="questions" class="tracking-in-expand" >
+
+                    <li>Question 2</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                <hr>
+                <small style="font-family: monospace; ">H i n t : </small>
+            </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/fcheck" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the Sub Level 2</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);"> </span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <%}else if(user.final == 2){%>
+
+            <div class="" id="question-container" >
+                <p>SUB LEVEL 3 OF 5</p>
+
+                <ol   id="questions" class="tracking-in-expand" >
+
+                    <li>Question 3</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                <hr>
+                <small style="font-family: monospace; ">H i n t : </small>
+            </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/fcheck" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the Sub Level 3</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <%}else if(user.final == 3){%>
+
+            <div class="" id="question-container" >
+                <p>SUB LEVEL 4 OF 5</p>
+
+                <ol   id="questions" class="tracking-in-expand" >
+
+                    <li>Question 4</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                <hr>
+                <small style="font-family: monospace; ">H i n t : </small>
+            </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/fcheck" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the Sub Level 4</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <%}else if(user.final == 4){%>
+        
+            <div class="" id="question-container" >
+                <p>SUB LEVEL 5 OF 5</p>
+
+                <ol   id="questions" class="tracking-in-expand" >
+
+                    <li>Question 5</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                <hr>
+                <small style="font-family: monospace; ">H i n t : </small>
+            </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/fcheck" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the Sub Level 5</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <%}else if(user.final == 4){%>
     
+            <div class="" id="question-container" >
+
+
+                <ol   id="questions" class="tracking-in-expand" >
+
+                    <li>Final answer pattern</li>
+                </ol>
+                
+                <p id="ans">Click here to answer</p>
+                
+            </div>
+
+            <img id="soln-bg" src="/images/3704081.jpg" alt="">
+
+            <div  id="solution" >
+                <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                <div id="soln-form" >
+                    <form  action="/playground/check" method="post">
+                        <p class="tracking-in-expand">
+                            <span style="color: #db095a;">Hey there,</span> <br> 
+                            <span style="font-size: 110%;">Type password here</span> <br> 
+                            <span style="font-size: 120%;">To Complete the final Level</span> <br>
+                            <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                <span style="font-size: 40%; color: rgb(10, 10, 128);">Form the final answer using the patterns and keys displayed on each sub levels </span>
+                            </a>
+                        </p>
+                        <div class="jello-horizontal" id="answer">
+                        <input name="password" placeholder="Type here" type="text" required > 
+                        <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+
+        <% } %>
+        
     
     <% }else{ %>
 
@@ -120,20 +275,7 @@ rel="stylesheet">
 
 
     <% } %>
-    <% if(user.level > 5){ %>
-    <footer>
-        <h3> Inno Hunt - Rules</h3>
-        <div >
-            <ol style="text-align: left;">
-                <li>You can answer only in the time between 10:00 AM to 10:00 PM (12 hrs)</li><br>
-                <li>Questions are displayed on the remaining time (i.e from 12:00 AM to 11:59 PM). </li><br>
-                <li>If you failed to answer within the given time, then you can't enter into next level.</li><br>
-                <li>Each level takes place on each day</li><br>
-                <li>You can try checking your answer for unlimited number of times</li>
-            </ol>
-        </div>
-    </footer>
-    <% } %>
+   
     <script>
 
         // var navItems = document.querySelectorAll("#navigator ul a");

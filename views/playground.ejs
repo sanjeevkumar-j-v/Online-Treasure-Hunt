@@ -24,7 +24,7 @@ rel="stylesheet">
         <div>
             <h1 class="tracking-in-expand" style="color: #88024a;  ">Welcome <br> Back !</h1>
             <h3 class="tracking-in-expand" style="color: #6c1b80;"> <%= user.name%> </h3>  
-            <% if(user.level == 6 || user.level == 99){ %>
+            <% if(user.level == 7 || user.level == 99){ %>
             <button id="continue" class="text-focus-in">
                 Continue
             </button>
@@ -32,7 +32,7 @@ rel="stylesheet">
         </div>
     </div>
 
-    <% if(user.level == 7 ){ %>
+    <% if(user.level == 8 ){ %>
  
         <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
             <h1>Hey you have completed level Seven!</h1>
@@ -40,52 +40,22 @@ rel="stylesheet">
             <p>Level 8 opens on Tomorrow 10:00 AM</p>
         </div>
 
-    <%}else if(user.level == 6 || user.level == 99){%>
+    <%}else if(user.level == 7 || user.level == 99){%>
 
         <div class="" id="question-container" >
-            <p>Q U E S T I O N S</p>
-
+            <!-- <p>Q U E S T I O N S</p> -->
+            <p>Club innovative congratulates you for reaching the final level of our treasure hunt </p>
             <ol  id="questions" class="tracking-in-expand" >
                     
-                <li>
-                    <span class="key">12325807</span> 7867 <i class="fas fa-arrow-up"></i> <br>  76 6548 <i class="fas fa-arrow-right"></i> 
-                </li>
-                <li>
-                    33 1959 <i class="fas fa-arrow-up"></i><br>    <span class='key'>1474248</span>7 3795 <i class="fas fa-arrow-left"></i>
-                </li>
-                <li>
-                     33 4489 <i class="fas fa-arrow-down"></i><br>    <span class="key">21478569</span>0 6693 <i class="fas fa-arrow-left"></i>  </li>
-                <li>
-                     35 4886 <i class="fas fa-arrow-up"></i> <br>  13<span class="key">123258789</span> 4076 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                    <span class="key">3214789</span>7 5498 <i class="fas fa-arrow-up"></i> <br>  45 0786 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     34 5553 <i class="fas fa-arrow-up"></i>  <br> <span class="key">7412345</span>9 2075 <i class="fas fa-arrow-right"></i>  </li>
-                <li>
-                     <span class="key">7415963</span> 0755 <i class="fas fa-arrow-down"></i> <br>  75 7342 <i class="fas fa-arrow-left"></i> </li>
-                <li>
-                     <span class="key">1268741</span>1 2865 <i class="fas fa-arrow-down"></i> <br>  174 7762 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     50 7753 <i class="fas fa-arrow-up"></i>  <br> <span class="key">7412345</span> 0839 <i class="fas fa-arrow-right"></i> </li>
-                <li> 
-                    1 2921 <i class="fas fa-arrow-down"></i><br>   3<span class="key">7412345</span> 8219 <i class="fas fa-arrow-right"></i>   </li>
-                <li>
-                     14 4064 <i class="fas fa-arrow-up"></i>  <br> <span class="key">14789</span>0 9405 <i class="fas fa-arrow-right"></i>  </li>
-                <li>
-                     5<span class="key">7412369456</span> 4868 <i class="fas fa-arrow-up"></i> <br>  46 1251 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     37 5665 <i class="fas fa-arrow-up"></i> <br>  <span class="key">14789</span>6 9780 <i class="fas fa-arrow-right"></i>  </li>
-                <li>
-                     35 0116 <i class="fas fa-arrow-up"></i> <br>  <span class="key">7415369</span>5 7681 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     <span class="key">159357</span> 4539 <i class="fas fa-arrow-up"></i> <br>  54 3773 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     2<span class="key">321478945</span> 7439 <i class="fas fa-arrow-up"></i><br>   89 2752 <i class="fas fa-arrow-right"></i> </li>
-                <li>
-                     <span class="key">14789</span> 9716 <i class="fas fa-arrow-up"></i><br>   77 5946 <i class="fas fa-arrow-right"></i>  </li>
-                <li>
-                     <span class="key">1235789</span> 3787 <i class="fas fa-arrow-up"></i><br>   127 8575 <i class="fas fa-arrow-right"></i> </li>
-        
+                <li>Questions for this level will be displayed only at tomorrow 10AM and at the same time you can start answering </li>
+
+                <li>This level consists of 5 sub-levels.</li>
+
+                <li>Only after completing one sub level, questions for next sub level will be displayed.</li>
+
+                <li>The answering time closes at 10PM so answer all the sub levels as fast as possible.</li>
+
+                <li>Be sure NOT to share your answers.</li>
                 
             </ol>
 
@@ -93,9 +63,9 @@ rel="stylesheet">
             <hr>
             
             <small style="font-family: monospace; ">
-                <u>H i n t s</u> <br>
+                <!-- <u>H i n t s</u> <br>
                 Unlock pattern  - A B C ... - 1 2 3 ...  <br> 
-                <i class="fas fa-map-marked-alt"></i>  
+                <i class="fas fa-map-marked-alt"></i>   -->
             </small>
                  <!-- <span style=" color: rgb(209, 212, 3);"> Convert me to alphabets to numbers </span> -->
             
@@ -105,7 +75,7 @@ rel="stylesheet">
 
 
 
-        <img id="soln-bg" src="/images/3704081.jpg" alt="">
+        <!-- <img id="soln-bg" src="/images/3704081.jpg" alt=""> -->
 <!--    
         <div  id="solution" >
             <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
@@ -129,7 +99,7 @@ rel="stylesheet">
         </div>
        -->
 
-
+<!-- 
 
     <div  id="solution" >
         <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
@@ -159,7 +129,7 @@ rel="stylesheet">
             </form>
 
         </div>
-    </div>
+    </div> -->
     
     <% }else{ %>
 
