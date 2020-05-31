@@ -72,11 +72,33 @@ rel="stylesheet">
              Five
             <%}%>
             of Final level</p>
+        <h6>
+            KEY : 
+
+            <% if(!user.final || user.final == 0){%>
+                AE
+            <%}else if(user.final == 1){%>
+                SU
+            <%}else if(user.final == 2){%>
+                HT
+            <%}else if(user.final == 3){%>
+                MR
+            <%}else if(user.final == 4){%>
+                NVI
+            <%}%>
+
+        </h6>
         
         <img  src="/images/level-up.png" alt="Level upgraded Image">
         <br>
         <br>
-        <a href="/back">Next</a>
+        <a href="/back"></a>
+        <% if(user.final == 4){%>
+        Finish
+        <%}else{%>
+        Next
+        <%}%>
+        </a>
         <hr>
         <span>Final level has 5 sub levels</span>
     </div>

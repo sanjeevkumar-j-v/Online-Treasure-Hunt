@@ -125,7 +125,7 @@ module.exports.fcheck = function(req, res){
 }
 module.exports.check = function(req, res){
     // console.log(req.body)
-    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'thesarunvenari'){
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'thesarumvenari'){
 
         // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
         //     if(err){
