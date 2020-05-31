@@ -26,6 +26,9 @@ const userSchema = new mongoose.Schema({
     rollno: {
         type: String,
         unique: true
+    },
+    final: {
+        type: Number
     }
 }, {
     timestamps: true
