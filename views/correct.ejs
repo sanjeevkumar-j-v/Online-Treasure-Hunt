@@ -4,15 +4,39 @@ href="https://fonts.googleapis.com/css?family=Fredoka%20One:100,100i,200,200i,30
 rel="stylesheet">
 <style>
     body {
-        background-image: linear-gradient(to right bottom, #00dcfd, #00c5ff, #42a4ff, #ad74ff, #eb12bc);
-        background-size: 400% 400%;
-        animation: bg-color-change 3s ease infinite;
+        /* background-image: linear-gradient(to right bottom, #00dcfd, #00c5ff, #42a4ff, #ad74ff, #eb12bc); */
+        background-image: linear-gradient(to right bottom, #f2e816, #ffb00b, #ff6f4c, #ff2284, #eb12bc);        animation: bg-color-change 3s ease infinite;
         font-family: Fredoka One;
         color: white;
         font-size: 2.5vw;
         text-align: center;
         
     }
+    .scale-up-center {
+	-webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+    }
+    @-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    }
+    @keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    }
+
     @keyframes bg-color-change {
         0% {
             background-position: 0% 50%;
@@ -59,12 +83,13 @@ rel="stylesheet">
 
     <div>
         <h3>Congratulations!</h3>
-        <p>You have successfully completed Level Seven</p>
+        <p>You have successfully completed Treasure Hunt</p>
         
-        <img  src="/images/win.svg" alt="Level upgraded Image">
+        <img class="scale-up-center"  src="/images/win3.svg" alt="Level upgraded Image">
         <br>
         <hr>
-        <span>Kindly wait for the next level clue, till Tomorrow morning</span>
+        <span>Results will be announced on Jun 3 or Jun 4</span>
+        <p>Thanks for your participation</p>
     </div>
 
 </body>

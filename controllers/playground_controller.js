@@ -1,5 +1,11 @@
 const passport = require('passport');
 const User = require("../models/user");
+const One = require("../models/one");
+const Two = require("../models/two");
+const Three = require("../models/three");
+const Four = require("../models/four");
+const Five = require("../models/five");
+
 const Eight = require("../models/eight");
 
 module.exports.wait = function(req, res){
@@ -29,7 +35,7 @@ module.exports.fcheck = function(req, res){
                 // cartoon
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 1}, function(err, result){ });
 
-                // fone.insertMany({email: req.user.email, name: req.user.name});
+                One.insertMany({email: req.user.email, name: req.user.name});
 
                 return res.render('fcorrect',{
                     title: "correct answer"
@@ -47,7 +53,7 @@ module.exports.fcheck = function(req, res){
                 // gibberish
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 2}, function(err, result){ });
 
-                // fone.insertMany({email: req.user.email, name: req.user.name});
+                Two.insertMany({email: req.user.email, name: req.user.name});
 
                 return res.render('fcorrect',{
                     title: "correct answer"
@@ -65,7 +71,7 @@ module.exports.fcheck = function(req, res){
                 // ingredients
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 3}, function(err, result){ });
 
-                // fone.insertMany({email: req.user.email, name: req.user.name});
+                Three.insertMany({email: req.user.email, name: req.user.name});
 
                 return res.render('fcorrect',{
                     title: "correct answer"
@@ -83,7 +89,7 @@ module.exports.fcheck = function(req, res){
 
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 4}, function(err, result){ });
 
-                // fone.insertMany({email: req.user.email, name: req.user.name});
+                Four.insertMany({email: req.user.email, name: req.user.name});
 
                 return res.render('fcorrect',{
                     title: "correct answer"
@@ -101,7 +107,7 @@ module.exports.fcheck = function(req, res){
 
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 5}, function(err, result){ });
 
-                // fone.insertMany({email: req.user.email, name: req.user.name});
+                Five.insertMany({email: req.user.email, name: req.user.name});
 
                 return res.render('fcorrect',{
                     title: "correct answer"
@@ -135,7 +141,7 @@ module.exports.check = function(req, res){
         // });
 
         if(req.user.level != 99){
-            User.findByIdAndUpdate( {_id: req.user.id}, {level: 7}, function(err, result){
+            User.findByIdAndUpdate( {_id: req.user.id}, {level: 8   }, function(err, result){
                 // console.log(result);
             });
         }
