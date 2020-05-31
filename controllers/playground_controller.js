@@ -25,7 +25,7 @@ module.exports.fcheck = function(req, res){
     if(req.user.level == 7){
         if(!req.user.final){
                 
-            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'huyapo'){
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'mjbcmd'){
                 // cartoon
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 1}, function(err, result){ });
 
