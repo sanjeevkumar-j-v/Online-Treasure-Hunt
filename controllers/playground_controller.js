@@ -1,6 +1,6 @@
 const passport = require('passport');
 const User = require("../models/user");
-const Six = require("../models/six");
+const Seven = require("../models/seven");
 
 module.exports.wait = function(req, res){
 
@@ -21,7 +21,7 @@ module.exports.start = function(req, res){
 }
 module.exports.check = function(req, res){
     // console.log(req.body)
-    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'kayamananngpangangaso'){
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'poszukiwanieskarbu'){
 
         // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
         //     if(err){
@@ -31,11 +31,11 @@ module.exports.check = function(req, res){
         // });
 
         if(req.user.level != 99){
-            User.findByIdAndUpdate( {_id: req.user.id}, {level: 6}, function(err, result){
+            User.findByIdAndUpdate( {_id: req.user.id}, {level: 7}, function(err, result){
                 // console.log(result);
             });
         }
-        Six.insertMany({email: req.user.email, name: req.user.name});
+        Seven.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
         });
