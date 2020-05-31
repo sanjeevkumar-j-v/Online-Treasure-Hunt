@@ -31,7 +31,7 @@ module.exports.fcheck = function(req, res){
 
                 // fone.insertMany({email: req.user.email, name: req.user.name});
 
-                return res.render('pcorrect',{
+                return res.render('fcorrect',{
                     title: "correct answer"
                 });
 
