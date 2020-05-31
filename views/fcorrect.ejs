@@ -59,12 +59,24 @@ rel="stylesheet">
 
     <div>
         <h3>Congratulations!</h3>
-        <p>You have successfully completed Sub Level one of Final level</p>
+        <p>You have successfully completed Sub Level 
+            <% if(!user.final || user.final == 0){%>
+             One
+            <%}else if(user.final == 1){%>
+             Two
+            <%}else if(user.final == 2){%>
+             Three
+            <%}else if(user.final == 3){%>
+             Four
+            <%}else if(user.final == 3){%>
+             Five
+            <%}%>
+            of Final level</p>
         
         <img  src="/images/level-up.png" alt="Level upgraded Image">
         <br>
         <br>
-        <a href="/back">Back</a>
+        <a href="/back">Next</a>
         <hr>
         <span>Final level has 5 sub levels</span>
     </div>

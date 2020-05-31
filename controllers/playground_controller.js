@@ -1,6 +1,6 @@
 const passport = require('passport');
 const User = require("../models/user");
-const Seven = require("../models/seven");
+const Eight = require("../models/eight");
 
 module.exports.wait = function(req, res){
 
@@ -8,6 +8,7 @@ module.exports.wait = function(req, res){
         title: "Successful registration"
     });
 }
+
 module.exports.start = function(req, res){
     User.findById(req.user.id, function(err, user){
 
@@ -19,9 +20,112 @@ module.exports.start = function(req, res){
     })
     
 }
+module.exports.fcheck = function(req, res){
+
+    if(req.user.level == 7){
+        if(!req.user.final){
+                
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'huyapo'){
+                // cartoon
+                User.findByIdAndUpdate( {_id: req.user.id}, {final: 1}, function(err, result){ });
+
+                // fone.insertMany({email: req.user.email, name: req.user.name});
+
+                return res.render('pcorrect',{
+                    title: "correct answer"
+                });
+
+            }else{
+                return res.render('wrong',{
+                    title: "Wrong answer"
+                });
+            }
+
+        }else if(req.user.final == 1){
+                
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'iimnmm'){
+                // gibberish
+                User.findByIdAndUpdate( {_id: req.user.id}, {final: 2}, function(err, result){ });
+
+                // fone.insertMany({email: req.user.email, name: req.user.name});
+
+                return res.render('fcorrect',{
+                    title: "correct answer"
+                });
+
+            }else{
+                return res.render('wrong',{
+                    title: "Wrong answer"
+                });
+            }
+
+        }else if(req.user.final == 2){
+                
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'trkil'){
+                // ingredients
+                User.findByIdAndUpdate( {_id: req.user.id}, {final: 3}, function(err, result){ });
+
+                // fone.insertMany({email: req.user.email, name: req.user.name});
+
+                return res.render('fcorrect',{
+                    title: "correct answer"
+                });
+
+            }else{
+                return res.render('wrong',{
+                    title: "Wrong answer"
+                });
+            }
+
+        }else if(req.user.final == 3){
+                
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'imiirem'){
+
+                User.findByIdAndUpdate( {_id: req.user.id}, {final: 4}, function(err, result){ });
+
+                // fone.insertMany({email: req.user.email, name: req.user.name});
+
+                return res.render('fcorrect',{
+                    title: "correct answer"
+                });
+
+            }else{
+                return res.render('wrong',{
+                    title: "Wrong answer"
+                });
+            }
+
+        }else if(req.user.final == 4){
+                
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == '331526193226'){
+
+                User.findByIdAndUpdate( {_id: req.user.id}, {final: 5}, function(err, result){ });
+
+                // fone.insertMany({email: req.user.email, name: req.user.name});
+
+                return res.render('fcorrect',{
+                    title: "correct answer"
+                });
+
+            }else{
+                return res.render('wrong',{
+                    title: "Wrong answer"
+                });
+            }
+
+        }else{
+            return res.redirect('/playground');
+        }
+
+
+    }else{
+        return res.redirect('/playground');
+    }
+
+}
 module.exports.check = function(req, res){
     // console.log(req.body)
-    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'poszukiwanieskarbu'){
+    if((req.body.password).trim().toLowerCase().split(" ").join("") == 'thesarunvenari'){
 
         // User.updateOne( {_id: req.cookies.user_id},{password: 121} ,function(err) {
         //     if(err){
@@ -35,7 +139,7 @@ module.exports.check = function(req, res){
                 // console.log(result);
             });
         }
-        Seven.insertMany({email: req.user.email, name: req.user.name});
+        Eight.insertMany({email: req.user.email, name: req.user.name});
         return res.render('correct',{
             title: "correct answer"
         });
@@ -45,6 +149,7 @@ module.exports.check = function(req, res){
         });
     }
 }
+
 
 module.exports.unavail = function(req, res){
 
