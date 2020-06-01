@@ -114,7 +114,7 @@ module.exports.fcheck = function(req, res){
                 });
 
             }else{
-                return res.render('wrong',{
+                return res.render('wrong2',{
                     title: "Wrong answer"
                 });
             }
