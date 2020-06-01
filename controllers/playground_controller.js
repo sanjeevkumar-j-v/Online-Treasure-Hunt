@@ -67,7 +67,7 @@ module.exports.fcheck = function(req, res){
 
         }else if(req.user.final == 2){
                 
-            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'trkil'){
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == 'erkil'){
                 // ingredients
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 3}, function(err, result){ });
 
