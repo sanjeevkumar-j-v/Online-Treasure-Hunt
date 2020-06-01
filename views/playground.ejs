@@ -35,103 +35,322 @@ rel="stylesheet">
     <% if(user.level == 8 ){ %>
  
         <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
-            <h1>Hey you have completed level Seven!</h1>
-            <h3>Kindly wait for the next level</h3>
-            <p>Level 8 opens on Tomorrow 10:00 AM</p>
+            <h1>Hey you have completed the Treasure Hunt</h1>
+            <h3>Results will be announced on Jun 4 or Jun 5</h3>
+            <p>Thanks for your participation</p>
         </div>
 
-    <%}else if(user.level == 7 || user.level == 99){%>
+        <%}else if(user.level == 7 || user.level == 99){%>
 
-        <div class="" id="question-container" >
-            <!-- <p>Q U E S T I O N S</p> -->
-            <p>Club innovative congratulates you for reaching the final level of our treasure hunt </p>
-            <ol  id="questions" class="tracking-in-expand" >
-                    
-                <li>Questions for this level will be displayed only at tomorrow 10AM and at the same time you can start answering </li>
-
-                <li>This level consists of 5 sub-levels.</li>
-
-                <li>Only after completing one sub level, questions for next sub level will be displayed.</li>
-
-                <li>The answering time closes at 10PM so answer all the sub levels as fast as possible.</li>
-
-                <li>Be sure NOT to share your answers.</li>
-                
-            </ol>
-
-            <!-- <p id="ans">Click here to answer</p>
-            <hr> -->
-            
-            <small style="font-family: monospace; ">
-                <!-- <u>H i n t s</u> <br>
-                Unlock pattern  - A B C ... - 1 2 3 ...  <br> 
-                <i class="fas fa-map-marked-alt"></i>   -->
-            </small>
-                 <!-- <span style=" color: rgb(209, 212, 3);"> Convert me to alphabets to numbers </span> -->
-            
-           
-        </div>
+            <% if(!user.final){ %>
+                <div class="" id="question-container" >
+                    <p>SUB LEVEL 1 OF 5</p>
     
-
-
-
-        <!-- <img id="soln-bg" src="/images/3704081.jpg" alt=""> -->
-<!--    
-        <div  id="solution" >
-            <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
-            <div id="soln-form" >
-                <form  action="/playground/check" method="post">
-                    <p class="tracking-in-expand">
-                        <span style="color: #db095a;">Hey there,</span> <br> 
-                        <span style="font-size: 110%;">Type password here</span> <br> 
-                        <span style="font-size: 120%;">To Unlock Next Level</span> <br>
-                        <a id="ques" style="text-decoration: none; color: inherit;" href="">
-                            <span style="font-size: 40%; color: rgb(10, 10, 128);">Click here for Question <i class="fas fa-question-circle"></i> </span>
-                        </a>
-                    </p>
-                    <div class="jello-horizontal" id="answer">
-                    <input name="password" placeholder="Type here" type="text" required > 
-                    <button class=" focus-in-contract-bck" type="submit">Submit</button>
-                    <small style="font-family: monospace; font-size: 10px;">Answering time ends at today 10:00 PM </small><br>
-                    </div>
-                </form>
-            </div>
-        </div>
-       -->
-
-<!-- 
-
-    <div  id="solution" >
-        <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
-        <div id="soln-form" >
-            
-            <form  action="" method="post">
-                <p class="tracking-in-expand">
-                    <span style="color: #db095a;">Hey there,</span> <br> 
-                    <span style="font-size: 110%;">Type password here</span> <br> 
-                    <span style="font-size: 120%;">To Unlock Next Level</span> <br>
-                    <a id="ques" style="text-decoration: none; color: inherit;" href="">
-                        <span style="font-size: 40%; color: rgb(10, 10, 128);">Click here for Question <i class="fas fa-question-circle"></i> </span>
-                    </a>
-                </p>
-                <div class="jello-horizontal" id="answer">
-                    <div id="untime-one">
-                        <p><i style="font-size: 40px;" class="fas fa-exclamation-triangle"></i></p>
-                    <p style="padding: 1px 5px 5px; color: rgb(223, 14, 14);">You can check your answer in the time between <br> 10:00 AM to 10:00 PM</p>
-                    <p>Note : You have unlimited attempts to check your answer</p>
-                    </div>
-                    <div id="untime-two">
-                        <p><i class="fas fa-exclamation-triangle"></i></p>
-                    <p style="padding: 1px 5px 5px; color: rgb(223, 14, 14);">You can check your answer in the time between <br> 10:00 AM to 10:00 PM</p>
-                    <p>Note : You have unlimited attempts to check your answer</p>
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li>
+                            <img src=" /images/ic/2 (1).jpeg" alt="">
+                            <img src=" /images/ic/6 (2).png" alt="">
+                            <img src=" /images/ic/5 (3).jpeg" alt="">
+                            <img src=" /images/ic/4 (4).jpeg" alt="">
+                            <img src=" /images/ic/3 (5).jpeg" alt="">
+                            <img src=" /images/ic/1 (6).jpeg" alt="">
+    
+                        </li>
+                        <li>
+                            <img src=" /images/ic/1 (1).jpeg" alt="">
+                            <img src=" /images/ic/2 (2).jpeg" alt="">
+                            <img src=" /images/ic/6 (3).png" alt="">
+                            <img src=" /images/ic/5 (4).jpeg" alt="">
+                            <img src=" /images/ic/4 (5).jpeg" alt="">
+                            <img src=" /images/ic/3 (6).jpeg" alt="">
+    
+                        </li>
+                        <li>
+                            <img src=" /images/ic/3 (1).jpeg" alt="">
+                            <img src=" /images/ic/1 (2).jpeg" alt="">
+                            <img src=" /images/ic/2 (3).jpeg" alt="">
+                            <img src=" /images/ic/6 (4).png" alt="">
+                            <img src=" /images/ic/5 (5).jpeg" alt="">
+                            <img src=" /images/ic/4 (6).jpeg" alt="">
+    
+                        </li>
+                        <li>
+                            <img src=" /images/ic/4 (1).jpeg" alt="">
+                            <img src=" /images/ic/3 (2).jpeg" alt="">
+                            <img src=" /images/ic/1 (3).jpeg" alt="">
+                            <img src=" /images/ic/2 (4).jpeg" alt="">
+                            <img src=" /images/ic/6 (5).png" alt="">
+                            <img src=" /images/ic/5 (6).jpeg" alt="">
+    
+                        </li>
+                        <li>
+                            <img src=" /images/ic/5 (1).jpeg" alt="">
+                            <img src=" /images/ic/4 (2).jpeg" alt="">
+                            <img src=" /images/ic/3 (3).jpeg" alt="">
+                            <img src=" /images/ic/1 (4).jpeg" alt="">
+                            <img src=" /images/ic/2 (5).jpeg" alt="">
+                            <img src=" /images/ic/6 (6).png" alt="">
+    
+                        </li>
+                        <li>
+                            <img src=" /images/ic/6 (1).png" alt="">
+                            <img src=" /images/ic/5 (2).jpeg" alt="">
+                            <img src=" /images/ic/4 (3).jpeg" alt="">
+                            <img src=" /images/ic/3 (4).jpeg" alt="">
+                            <img src=" /images/ic/1 (5).jpeg" alt="">
+                            <img src=" /images/ic/2 (6).jpeg" alt="">
+    
+                        </li>
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    <hr>
+                    <small style="font-family: monospace; ">H i n t : Join the first letters <br> use the first image of each boxes to answer orderly <br>
+                        Note : Join the last letters of answers <br> (Final answer is a meaning less word)
+                    </small>
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/fcheck" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the Sub Level 1</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);"> </span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
-
-        </div>
-    </div> -->
+            <%}else if(user.final == 1){%>
     
-    <% }else{ %>
+                <div class="" id="question-container" >
+                    <p>SUB LEVEL 2 OF 5</p>
+    
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li>19 8 15 23 _ 20 15 _ 13 15 22 5 _ 20 9 5 </li>
+                        <li>7 15 1 12 _ 12 21 _ 3 1 20 _ 8 9 </li>
+                        <li>2 8 1 9 _ 20 5 1 _ 25 1 13 </li>
+                        <li>8 1 18 9 _ 22 1 1 12 _ 7 21 14 </li>
+                        <li>23 5 12 3 15 13 5 _ 1 18 5 _ 16 9 14 3 8 _ 18 15 15 13 </li>
+                        <li>16 1 14 20 _ 3 8 1 14 7 5 _ 9 14 _ 20 8 5 _ 18 1 13</li>
+    
+    
+    
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    <hr>
+                    <small style="font-family: monospace; ">Note : Join the last letters of answers <br> (Final answer is a meaning less word)</small>
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/fcheck" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the Sub Level 2</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);"> </span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+            <%}else if(user.final == 2){%>
+    
+                <div class="" id="question-container" >
+                    <p>SUB LEVEL 3 OF 5</p>
+    
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li><img style="width: 100%;" src="/images/ic/q1.png" alt=""></li>
+                        <li><img style="width: 100%;" src="/images/ic/q2.png" alt=""></li>
+                        <li><img style="width: 100%;" src="/images/ic/q3.png" alt=""></li>
+                        <li><img style="width: 100%;" src="/images/ic/q4.png" alt=""></li>
+                        <li><img style="width: 100%;" src="/images/ic/q5.png" alt=""></li>
+    
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    <hr>
+                    <small style="font-family: monospace; ">Note : Join the last letters of answers <br> (Final answer is a meaning less word)</small>
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/fcheck" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the Sub Level 3</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+            <%}else if(user.final == 3){%>
+    
+                <div class="" id="question-container" >
+                    <p>SUB LEVEL 4 OF 5</p>
+    
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li style="color: yellow;">321478945 7412365456987</li>
+                        <li style="color: yellow;">3214789 7412365456987</li>
+                        <li style="color: yellow;">12368741 7412369456</li>
+                        <li style="color: yellow;">21478569 7412365456987</li>
+                        <li style="color: yellow;">1236874 21478569</li>
+                        <li style="color: yellow;">3214789 7412369456</li>
+                        <li style="color: yellow;">3214789 7412345</li>
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    <hr>
+                    <small style="font-family: monospace; ">H i n t  <img style="width: 150px;" src="/images/TN_logo.png" alt=""> <br>
+                        Note : Join the last letters of answers <br> (Final answer is a meaning less word)
+                    </small>
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/fcheck" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the Sub Level 4</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+            <%}else if(user.final == 4){%>
+            
+                <div class="" id="question-container" >
+                    <p>SUB LEVEL 5 OF 5</p>
+    
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li>
+    
+                            <img style="width: 100%;" src="/images/qs5.png" alt="">
+                        </li> 
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    <hr>
+                    <small style="font-family: monospace; ">N o t e : Final answer is a set of numbers </small>
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/fcheck" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the Sub Level 5</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);"></span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+            <%}else if(user.final == 5){%>
+        
+                <div class="" id="question-container" >
+    
+    
+                    <ol   id="questions" class="tracking-in-expand" >
+    
+                        <li>Final answer pattern</li>
+                        <li style="height: 40vh; display: flex; align-items: center;justify-content: center;align-content: center; font-size: 120%;">
+    
+                            3.1 3.0 1.1 2.0 1.0 4.1 2.1 <br>
+                            4.0 5.1 1.1 5.0 1.0 4.1 5.2
+    
+                        </li>
+                    </ol>
+                    
+                    <p id="ans">Click here to answer</p>
+                    
+                </div>
+    
+                <img id="soln-bg" src="/images/3704081.jpg" alt="">
+    
+                <div  id="solution" >
+                    <div class="img-container kenburns-right" ><img style="width: 100%;" src="/images/think.png" alt=""></div>
+                    <div id="soln-form" >
+                        <form  action="/playground/check" method="post">
+                            <p class="tracking-in-expand">
+                                <span style="color: #db095a;">Hey there,</span> <br> 
+                                <span style="font-size: 110%;">Type password here</span> <br> 
+                                <span style="font-size: 120%;">To Complete the final Level</span> <br>
+                                <a id="ques" style="text-decoration: none; color: inherit;" href="">
+                                    <span style="font-size: 40%; color: rgb(10, 10, 128);">Form the final answer using the patterns and keys displayed on each sub levels </span>
+                                </a>
+                            </p>
+                            <div class="jello-horizontal" id="answer">
+                            <input name="password" placeholder="Type here" type="text" required > 
+                            <button class=" focus-in-contract-bck" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        
+    
+            <% } %>
+            
+        
+        <% }else{ %>
 
         <div class="text" style="color: rgb(255, 0, 98); height: 80vh; margin: 30px; padding: 20px; border: 5px solid rgb(230, 81, 27); border-radius: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; align-content: center;">
             <h2>Sorry, You didn't cleared previous level</h2>
@@ -144,19 +363,20 @@ rel="stylesheet">
 
 
     <% if(user.level > 5){ %>
-    <!-- <footer>
-        <h3> Inno Hunt - Rules</h3>
+    <footer>
+        <h3> Final level - Rules</h3>
         <div >
-            <ol style="text-align: left;">
-                <p>If you have any doubts,ask your queries to <a>clubofinnovaters@gmail.com</a></p>
-                <li>You can answer only in the time between 10:00 AM to 10:00 PM (12 hrs)</li><br>
-                <li>Questions are displayed on the remaining time (i.e from 12:00 AM to 11:59 PM). </li><br>
-                <li>If you failed to answer within the given time, then you can't enter into next level.</li><br>
-                <li>Each level takes place on each day </li><br>
-                <li>You can try checking your answer for unlimited number of times</li>
-            </ol>
+            <li>Questions for this level will be displayed only from today 10AM and at the same time you can start answering </li>
+
+            <li>This level consists of 5 sub-levels.</li>
+
+            <li>Only after completing one sub level, questions for next sub level will be displayed.</li>
+
+            <li>The answering time closes at 10 PM so answer all the sub levels as fast as possible.</li>
+
+            <li>Be sure NOT to share your answers.</li>
         </div>
-    </footer> -->
+    </footer>
     <% } %>
 
 

@@ -103,7 +103,7 @@ module.exports.fcheck = function(req, res){
 
         }else if(req.user.final == 4){
                 
-            if((req.body.password).trim().toLowerCase().split(" ").join("") == '331526193226'){
+            if((req.body.password).trim().toLowerCase().split(" ").join("") == '262719261533'){
 
                 User.findByIdAndUpdate( {_id: req.user.id}, {final: 5}, function(err, result){ });
 
