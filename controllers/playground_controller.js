@@ -16,14 +16,15 @@ module.exports.wait = function(req, res){
 }
 
 module.exports.start = function(req, res){
-    User.findById(req.user.id, function(err, user){
+    return res.redirect('/');
 
-        // if(user.rollno){
-            return res.render('playground',{
-                title: "play game"
-            });
+    // User.findById(req.user.id, function(err, user){
+
+    //         return res.render('playground',{
+    //             title: "play game"
+    //         });
   
-    })
+    // })
     
 }
 module.exports.fcheck = function(req, res){
