@@ -82,14 +82,18 @@ rel="stylesheet">
 <body>
 
     <div>
-        <h3>Congratulations!</h3>
-        <p>You have successfully completed Treasure Hunt</p>
+        <h3>Congratulations !</h3>
+        <p>Thanks for your participation</p>
         
-        <img class="scale-up-center"  src="/images/win3.svg" alt="Level upgraded Image">
+        <img class="scale-up-center"  src="/images/level-up.png" alt="Level upgraded Image">
         <br>
         <hr>
-        <span>Results will be announced on Jun 3 or Jun 4</span>
-        <p>Thanks for your participation</p>
+
+        <% if (user.level == 8){%>
+            <span>You have successfully completed all levels</span>
+        <%}%>
+        <a href="/back">Back</a>
+
     </div>
 
 </body>

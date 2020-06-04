@@ -9,6 +9,7 @@ router.get('/back',homeController.back);
 router.get('/testinguh',homeController.testing);
 router.use('/users', require('./users'));
 router.use('/playground',require('./playground'));
+router.get('/check',homeController.check);
 
 
 module.exports = router;
