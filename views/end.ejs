@@ -10,6 +10,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
         
@@ -44,21 +46,25 @@
             width: 100px; border-radius: 10px;
         }
         .points>li{
-            color: black;
+            color: rgb(243, 47, 77);
+            text-align: center;
+            font-weight: bold;
+            background-color: white;
             list-style: decimal;
             margin-top: 4px;
             margin-left: 20px;
             padding: 5px 10px;
-            border: 2px solid #fe7b7b;
+            /* border: 2px solid #fe7b7b; */
             border-radius: 6px;
-            box-shadow: 5px 10px 50px 10px rgba(117, 111, 111, 0.05);
+            box-shadow: 5px 5px 10px 1px rgba(8, 23, 233, 0.5);
         }
         .points ul li{
             list-style: disc;
             margin-left: 20px;
+            text-align: center;
         }
         .feedback{
-            background-image: linear-gradient(to right bottom, #00dcfd, #42a4ff, #7580e4 );
+            background-image: linear-gradient(to right bottom, #aceff8, #00dcfd, #42a4ff, #7580e4 );
             margin: 100px; 
             height: 75vh; 
             overflow: scroll;
@@ -78,6 +84,11 @@
         @media (max-width:668px){
             #head-logo {
                 width: 60px;
+            }
+            .points>li{
+                list-style: none;
+                margin-left: 10px;
+              
             }
             .feedback{
 
@@ -260,7 +271,7 @@
     
     <!--====== ABOUT PART START ======-->
 
-    
+<!--     
     <section id="who" class="about-area pt-70">
         <div class="container">
             <div class="row">
@@ -269,32 +280,31 @@
                         <div class="section-title">
                             <div class="line"></div>
                             <h3 class="title">Who <span> can participate?</span></h3>
-                        </div> <!-- section title -->
+                        </div> 
                         <p class="text">
                             We are glad to welcome you all.
                             <ol class="points">
                                 <br>
-                                <!-- <li>Beloved <b>students</b> of Mepco</li>
-                                <li>Grateful <b>faculty</b> and <b>staffs</b> of Mepco</li> -->
+                                
                             </ol>
                             <br>
                             And this is a <b>single player</b> Game.
                         </p>           
                         <p class="text">Note : Registrations are CLOSED</p>
                         <a href="#" class="main-btn" style="font-size: 130%; font-weight: bolder;">Play</a>
-                    </div> <!-- about content -->
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
                         <img src="/images/who.jpg" alt="who can">
-                    </div> <!-- about image -->
+                    </div> 
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+            </div>
+        </div>
         <div class="about-shape-1">
             <img src="assets/images/about-shape-1.svg" alt="shape">
         </div>
-    </section>
+    </section> -->
     
     <!-- <section class="about-area pt-70">
         <div class="about-shape-2">
@@ -366,7 +376,7 @@
                                 <li> Kavya shenbagam</li>
                                 <li> Hariharanaveen N</li>
                                 <li> Balaji C</li>
-                                <li> Loahesh.M</li>
+                                
                             </ol>
                             
                         </p>
@@ -595,7 +605,11 @@
                                 <ul class="link">
                                     <li><a>I'm Sanjeev Kumar, Web designer</a></li>
                                     <li><a>Second year CSE student at Mepco.</a></li>
-                                    
+                                    <li><a>I recently learned web designing and I was excited to create a website. <br>
+                                        So, I have designed a website for an online treasure hunt event with the help of Club Innovative, which is my first major project on web development. <br>
+                                        If you want any help from me, feel free to ask.
+                                        I'll always be there to help you. <br>
+                                        Thank you.</a></li>
                                 </ul>
                             </div> 
                         </div>
@@ -606,10 +620,10 @@
                                 <h4 class="title">Contact Me</h4>
                             </div>
                             <ul class="contact">
-                                <li>9626244242</li>
-                                <li>sanjeevkumarjv@gmail.com</li>
-                                <li>Follow me on Insta, <br>
-                                    <a href="https://www.instagram.com/solo_king_sk/">solo_king_sk</a></li>
+                                <li><i class="fas fa-phone"></i>  9626244242</li>
+                                <li><i class="far fa-envelope"></i>  sanjeevkumarjv@gmail.com</li>
+                                <li><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/sanjeev-kumar-fullstack-developer/">Sanjeev Kumar</a> </li>
+                                <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/solo_king_sk/"> solo_king_sk</a></li>
                                 <li>Madurai.</li>
                             </ul>
                         </div> <!-- footer contact -->
